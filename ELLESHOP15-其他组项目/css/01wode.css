@@ -1,0 +1,330 @@
+/* ------------头部开始------------ */
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    width: 7.5rem;
+    height: 3.22rem;
+    background: #251d1d;
+    display: flex;
+    font-size: 0.2rem;
+    color: #fff;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.header h3 {
+    width: 100%;
+    height: 3.22rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.33rem;
+}
+.header dl {
+    display: flex;
+    width: 7.5rem;
+    height: 1.42rem;
+    /* background: #f00; */
+    margin-top: 0.8rem;
+}
+
+.header dl dd {
+    margin-left: 0.3rem;
+}
+
+.header dl dd > img {
+    width: 1.42rem;
+    height: 1.42rem;
+}
+
+.header dl dt {
+    width: 2rem;
+    height: 1.42rem;
+    font-size: 0.27rem;
+    color: #fff;
+    /* background: #00f; */
+    display: flex;
+    flex-direction: column;
+}
+
+.header dl dt span {
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    margin-top: 0.3rem;
+    font-size: 0.27rem;
+    color: #fff;
+    text-indent: 0.2rem;
+    /* background: rgb(92, 92, 148); */
+}
+
+.header dl dt p {
+    width: 2.3rem;
+    height: 0.38rem;
+    white-space: nowrap;
+    font-size: 0.18rem;
+    color: #fff;
+    background: #403d3e;
+    border-radius: 0.2rem;
+    margin-top: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.1rem;
+}
+
+/* ------------头部结束-------------- */
+
+/* section设置 */
+
+section {
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    overflow: auto;
+}
+
+/* part1 */
+
+.part1 {
+    width: 6.91rem;
+    height: 2.56rem;
+    background: #fff;
+    position: absolute;
+    border-radius: 0.15rem;
+    box-shadow: 0 0 0.1rem #ccc;
+    top: 2.4rem;
+    z-index: 0;
+}
+
+.part1 h2 {
+    width: 6.91rem;
+    height: 1rem;
+    font-weight: 700;
+    font-size: 0.27rem;
+    color: #101010;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+}
+
+.part1 h2 span {
+    font-size: 0.22rem;
+    color: #999999;
+}
+
+.part1 ul {
+    width: 6.91rem;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.23rem;
+    margin-top: 0.4rem;
+}
+
+.part1 ul li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.part1 ul .iconfont {
+    font-weight: 600;
+    font-size: 0.42rem;
+}
+
+/* part2 */
+
+.part2 {
+    width: 6.91rem;
+    height: 2.56rem;
+    background: #fff;
+    border-radius: 0.15rem;
+    box-shadow: 0 0 0.2rem #ccc;
+    margin-top: 2.1rem;
+    flex-shrink: 0;
+}
+
+.part2 h2 {
+    width: 6.91rem;
+    height: 1rem;
+    font-weight: 700;
+    font-size: 0.27rem;
+    color: #101010;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+}
+
+.part2 h2 span {
+    font-size: 0.22rem;
+    color: #999999;
+}
+
+.part2 .yue {
+    display: flex;
+    font-size: 0.25rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.part2 .yue figure {
+    width: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.part2 .yue figure p {
+    font-size: 0.22rem;
+}
+
+.part2 .yue figure h3 {
+    font-size: 0.36rem;
+    color: #101010;
+    margin-top: 0.1rem;
+}
+
+.part2 .yue ul {
+    display: flex;
+    margin-right: 0.1rem;
+}
+
+.part2 .yue ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0.2rem 0.2rem;
+}
+
+.part2 .yue ul li .iconfont {
+    font-size: 0.32rem;
+}
+
+.part2 .yue ul li p {
+    font-size: 0.22rem;
+}
+
+/* part3 */
+
+.part3 {
+    width: 6.91rem;
+    height: 1.41rem;
+    background: #fff;
+    border-radius: 0.15rem;
+    box-shadow: 0 0 0.2rem #ccc;
+    margin-top: 0.28rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.part3 img {
+    width: 6.91rem;
+    height: 1.41rem;
+}
+
+/* part4 */
+
+.part4 {
+    width: 6.91rem;
+    height: 2.56rem;
+    background: #fff;
+    border-radius: 0.15rem;
+    box-shadow: 0 0 0.2rem #ccc;
+    margin-top: 0.28rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+.part4 h2 {
+    width: 6.91rem;
+    height: 1rem;
+    font-weight: 700;
+    font-size: 0.27rem;
+    color: #101010;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+}
+
+.part4 h2 span {
+    font-size: 0.22rem;
+    color: #999999;
+}
+
+.part4 ul {
+    width: 6.91rem;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.23rem;
+    margin-top: 0.4rem;
+}
+
+.part4 ul li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.part4 ul .iconfont {
+    font-weight: 600;
+    font-size: 0.42rem;
+}
+
+/* -------------4张卡片结束-------------- */
+
+/* -----------底部开始--------------- */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    height: 0.94rem;
+    margin-bottom: 0.25rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    flex-shrink: 0;
+    position: relative;
+    background: #fff;
+}
+
+footer figure {
+    font-size: 0.18rem;
+    /* line-height: 0.94rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #999999;
+}
+
+footer figure .iconfont {
+    font-size: 0.39rem;
+    text-align: center;
+    color: #999999;
+}
+
+footer figure:nth-child(6) {
+    font-weight: 600;
+    color: #101010;
+}
+
+footer img {
+    width: 1.52rem;
+    height: 1.52rem;
+    position: absolute;
+    left: 2.9rem;
+    bottom: -0.25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #eee;
+}

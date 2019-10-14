@@ -1,0 +1,135 @@
+/* --------头部开始------ */
+
+header {
+    height: 0.97rem;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+header .iconfont {
+    font-size: 0.39rem;
+    color: #101010;
+    margin: 0 0.2rem;
+}
+
+header p {
+    font-size: 0.26rem;
+    color: #101010;
+    font-weight: 600;
+}
+
+
+/* --------头部结束----------- */
+
+section {
+    width: 100%;
+    /* flex: 1; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 0.18rem;
+    /* flex-shrink: 0; */
+    overflow: auto;
+}
+
+section .title {
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+section .title img:nth-of-type(1) {
+    display: block;
+    width: 100%;
+    height: 2.9rem;
+}
+
+section .title img:nth-of-type(2) {
+    display: block;
+    width: 100%;
+    height: 2.9rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/banner-tiaozhuan-zhezhao.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+section .title h3 {
+    position: absolute;
+    left: 34%;
+    top: 1rem;
+    font-size: 0.23rem;
+    color: #fff;
+}
+
+section .title p {
+    color: #fff;
+    position: absolute;
+    left: 40%;
+    top: 1.6rem;
+    font-size: 0.33rem;
+}
+
+section .title span:nth-child(5) {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.2rem;
+    color: #fff;
+}
+
+
+/* ----------banner结束----------- */
+
+section .f4 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 0.1rem;
+}
+
+section .f4 figure {
+    width: 3.3rem;
+    height: 5.6rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section .f4 figure img {
+    width: 3.3rem;
+    height: 4.2rem;
+}
+
+section .f4 figure h3 {
+    font-size: 0.22rem;
+    color: #101010;
+}
+
+section .f4 figure span:nth-of-type(1) {
+    display: inline-block;
+    margin-bottom: 0.1rem;
+    font-size: 0.22rem;
+    color: #acacac;
+    white-space: nowrap;
+}
+
+section .f4 figure span:nth-of-type(2) {
+    display: inline-block;
+    margin-bottom: 0.1rem;
+    font-size: 0.26rem;
+    color: #101010;
+}
+
+section .f4 figure span:nth-of-type(3) {
+    margin-left: 1.8rem
+}

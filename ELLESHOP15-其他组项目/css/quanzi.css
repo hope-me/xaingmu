@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 13.3333vw;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+
+header {
+    height: 1.24rem;
+    position: fixed;
+    width: 100%;
+    background: #fff
+}
+
+header li a {
+    color: #999;
+    text-decoration: none
+}
+.big{font-size: .3rem;}
+
+header li {
+    font-size: .24rem;
+    color: #999;
+    float: left;
+    line-height: 1.4rem;
+    margin-left: .3rem;
+    font-weight: 500;
+}
+
+#header-font {
+    color: #101010;
+    font-size: .42rem;
+    position: absolute;
+    top: .44rem;
+    right: .3rem;
+}
+
+/* header end */
+
+section {
+    flex-grow: 1;
+    margin-top: 1.24rem;
+}
+
+.ren {
+    height: 2.6rem;
+    display: flex;
+    justify-content: space-around;
+    padding-top: .3rem;
+    background: #f9f9f9;
+}
+
+.ren figure figcaption {
+    color: #999;
+    margin-top: .2rem;
+    font-size: .2rem;
+    text-align: center;
+}
+
+.ren figure div {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: .22rem;
+}
+
+.ren figure img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.ff span {
+    color: white
+}
+
+.bgimg {
+    background: url(../img/ren1.png) no-repeat;
+    background-size: 100%;
+}
+
+.echou {
+    height: 1.22rem;
+    display: flex;
+}
+
+.echou img {
+    width: .8rem;
+    height: .8rem;
+    margin: .4rem .3rem 0 .3rem
+}
+
+.echou figure h3 {
+    color: #1d1d1d;
+    font-size: .26rem;
+}
+
+.echou figure span {
+    color: #999;
+    font-size: .2rem;
+    margin-right: .3rem;
+}
+
+.echou button {
+    margin: .3rem 0 .2rem 2.1rem;
+    border: red 2px solid;
+    border-radius: 5px;
+    padding: .1rem .2rem;
+    background: white;
+    color: red
+}
+
+.jietou {
+    height: 4.7rem;
+    padding-top: .1rem
+}
+
+.jietou h3 {
+    margin-left: .3rem;
+    font-size: .26rem;
+    color: #1b1b1b
+}
+
+.jietou ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.jietou ul img {
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+.jietou .santu {
+    height: .9rem;
+    display: flex;
+    padding-top: .3rem
+}
+
+.santu .fangtu {
+    width: 1.4rem;
+    height: .6rem;
+    background: yellowgreen;
+    margin-left: .3rem
+}
+
+.santu span {
+    color: #999;
+    font-size: .3rem;
+}
+
+#ping {
+    margin-left: 4rem
+}
+
+#osp {
+    margin-left: .3rem
+}
+
+.jietou2 h3 {
+    margin-left: .3rem;
+    font-size: .26rem;
+    color: #1b1b1b
+}
+
+.jietou2 ul img {
+    width: 6.9rem;
+    height: 3.57rem;
+    margin-left: .3rem
+}
+
+.tiao {
+    margin: .3rem 0 .5rem 2rem;
+    width: 2.66rem;
+    height: .1rem;
+    background: #000;
+    border-radius: .1rem
+}

@@ -1,0 +1,413 @@
+html {
+    font-size: 13.333vw;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 1.39rem;
+}
+
+.section_1 {
+    background: #fff;
+    flex: 1;
+    overflow: auto;
+}
+
+
+/* 基础布局结束 */
+
+header nav {
+    height: 1.13rem;
+    margin-top: 0.26rem;
+    font-size: 0.24rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav aside {
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-right: 0.31rem;
+}
+
+header nav aside .iconfont {
+    font-size: 0.42rem
+}
+
+.top_list {
+    width: 5.1rem;
+    height: 0.51rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-left: 0.31rem
+}
+
+.top_list li {
+    display: flex;
+    align-items: baseline
+}
+
+.top_list a {
+    color: #999;
+    display: block;
+}
+
+.top_list li:nth-child(1) {
+    font-size: 0.46rem;
+}
+
+.top_list li:nth-child(1) a {
+    color: #101010
+}
+
+
+/* 头部 结束 */
+
+.section_1 .all_aside1 {
+    width: 6.91rem;
+    height: 3.81rem;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+    margin-bottom: 0.18rem
+}
+
+.x_car {
+    width: 6.91rem;
+    height: 3.81rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.car_img {
+    width: 6.91rem;
+    height: 3.81rem;
+    overflow: hidden;
+}
+
+.car_img li {
+    width: 6.91rem;
+    height: 3.81rem;
+}
+
+.car_img li img {
+    width: 6.91rem;
+    height: 3.81rem;
+    border-radius: 0.15rem;
+}
+
+.car_btn {
+    width: 1.05rem;
+    height: 0.28rem;
+    position: fixed;
+    right: 3rem;
+    top: 3.65rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+}
+
+.car_btn p {
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    background: #fff
+}
+
+.car_text {
+    width: 2.56rem;
+    height: 1.3rem;
+    position: absolute;
+    bottom: 1.21rem;
+    left: 0.51rem;
+    font-size: 0.19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.car_text h2 {
+    font-size: 0.21rem;
+    color: rgb(16, 16, 16);
+    font-weight: bold
+}
+
+.car_text p:nth-of-type(1) {
+    font-size: 0.28rem;
+}
+
+.car_text p:nth-of-type(2) {
+    font-size: 0.19rem
+}
+
+
+/* 轮播banner样式结束 */
+
+.section_1 .all_article1 {
+    width: 6.91rem;
+    height: 7.12rem;
+    margin: 0 auto;
+}
+
+.min_newpople {
+    width: 6.91rem;
+    height: 1.21rem;
+    background: #f9f9f9;
+    border-radius: 0.1rem;
+    font-size: 0.28rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.min_newpople div {
+    width: 3.46rem;
+    height: 1.21rem;
+    padding-left: 0.31rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.min_newpople figcaption {
+    font-weight: bold;
+    margin-top: 0.3rem
+}
+
+.min_newpople div p {
+    font-size: 0.22rem;
+    margin-bottom: 0.27rem
+}
+
+.min_newpople a {
+    display: block;
+    width: 1rem;
+    height: 0.55rem;
+    background: rgb(237, 57, 51);
+    text-align: center;
+    line-height: 0.55rem;
+    color: #fff;
+    border-radius: 0.17rem;
+    margin-right: 0.4rem
+}
+
+
+/* 新人礼 结束 */
+
+article aside {
+    width: 6.91rem;
+    height: 3.62rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.you_xuan {
+    width: 3.35rem;
+    height: 3.62rem;
+    background: rgb(249, 249, 249);
+    position: relative;
+}
+
+.you_xuan h2 {
+    font-size: 0.27rem;
+    font-weight: bold;
+    color: rgb(16, 16, 16);
+    position: absolute;
+    top: 0.38rem;
+    left: 0.18rem
+}
+
+.you_xuan p {
+    font-size: 0.21rem;
+    color: rgb(153, 153, 153);
+    position: absolute;
+    left: 0.18rem;
+    top: 0.75rem
+}
+
+.you_xuan img {
+    width: 100%;
+    height: 3.62rem;
+    border-radius: 0.1rem
+}
+
+
+/* 优选结束 */
+
+.zhe_kou {
+    width: 3.38rem;
+    height: 3.62rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.zhe_top {
+    width: 3.38rem;
+    height: 1.72rem;
+    position: relative;
+}
+
+.zhe_top img {
+    width: 3.38rem;
+    height: 1.72rem;
+    border-radius: 0.1rem;
+}
+
+.zhe_top h2 {
+    font-size: 0.27rem;
+    font-weight: bold;
+    color: rgb(16, 16, 16);
+    position: absolute;
+    top: 0.38rem;
+    left: 0.18rem
+}
+
+.zhe_top p {
+    font-size: 0.21rem;
+    color: rgb(153, 153, 153);
+    position: absolute;
+    left: 0.18rem;
+    top: 0.75rem
+}
+
+.zhe_top i {
+    font-style: normal;
+    color: #ed3933
+}
+
+.zhe_botm {
+    width: 3.38rem;
+    height: 1.7rem;
+}
+
+.zhe_botm img {
+    width: 3.38rem;
+    height: 1.7rem;
+    border-radius: 0.1rem
+}
+
+
+/* 折扣结束 */
+
+.big_img {
+    width: 6.91rem;
+    height: 1.7rem;
+}
+
+.big_img img {
+    width: 6.91rem;
+    height: 1.7rem;
+}
+
+
+/* 大图片结束 */
+
+.jin_x {
+    width: 6.91rem;
+    min-height: 2rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.jx_title {
+    font-size: 0.29rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.16rem
+}
+
+.jx_title span {
+    display: block;
+    width: 0.56rem;
+    height: 0.04rem;
+    border-radius: 0.1rem;
+    background: #a1a1a1;
+    margin: 0 0.1rem
+}
+
+.jx_title p:nth-of-type(2) {
+    width: 1.6rem;
+    height: 0.49rem;
+    line-height: 0.9rem;
+    font-size: 0.27rem;
+    background: #fff;
+    text-align: center;
+    color: #101010;
+    font-weight: bold;
+}
+
+
+/* 精选结束 */
+
+#footer {
+    height: 1.65rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#footer .iconfont {
+    font-size: 0.40rem
+}
+
+#footer_nav {
+    height: 0.94rem;
+    display: flex;
+    background: #fff;
+    border-top: #e7e7e7 solid 2px;
+    border-bottom: #e7e7e7 solid 2px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer_nav figure:nth-child(1) {
+    color: #101010
+}
+
+#footer_nav figure {
+    text-align: center;
+    font-size: 0.17rem;
+    color: #999999
+}
+
+#footer_logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.28rem;
+    right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 2px #f4f4f4;
+    background: #fff;
+    z-index: 5;
+}
+
+#footer_logo span {
+    font-size: 0.32rem;
+    text-align: center;
+    color: #999;
+}
+
+#footer_logo span:nth-child(3) {
+    font-size: 0.17rem;
+}
+
+
+/* 尾部结束 */

@@ -1,0 +1,136 @@
+.section_3 {
+    background: #fff;
+    overflow: auto;
+}
+
+.girl_aside {
+    width: 6.91rem;
+    height: 3.56rem;
+    margin: 0 auto;
+    margin-top: 0.38rem;
+    margin-bottom: 0.2rem
+}
+
+.girl_aside img {
+    width: 6.91rem;
+    height: 3.56rem;
+    border-radius: 0.14rem
+}
+
+.girl_aside_02 {
+    width: 6.91rem;
+    height: 2.1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.girl_aside_02 div img {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 0.12rem
+}
+
+.girl_article {
+    width: 6.91rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.girl_article aside {
+    font-size: 0.25rem;
+    width: 6.91rem;
+    height: 1.31rem;
+    margin-top: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start
+}
+
+.girl_article aside h2 {
+    font-size: 0.21rem;
+    color: #ed3933;
+    margin-top: 0.15rem
+}
+
+.girl_article aside p:nth-of-type(1) {
+    font-size: 0.28rem;
+    color: #101010
+}
+
+.girl_article aside p:nth-of-type(2) {
+    font-size: 0.16rem;
+    color: #999;
+    margin-bottom: 0.19rem
+}
+
+.girl_article_img {
+    width: 6.91rem;
+    height: 4.5rem;
+    margin-top: 0.28rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.girl_article_img .girl_img1 {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.girl_article_img .girl_img1 img {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.girl_article_img img {
+    border-radius: 0.12rem
+}
+
+.girl_article_img .girl_img2 {
+    width: 2.1rem;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.girl_article_img .girl_img2 img:nth-child(1) {
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+.girl_article_img .girl_img2 img:nth-child(2) {
+    width: 2.1rem;
+    height: 2.05rem;
+}
+
+
+/* girl article0000000000000000111111111111111结束 */
+
+.girl_article2 {
+    width: 6.91rem;
+    min-height: 0.82rem;
+    margin: 0 auto;
+    margin-top: 0.22rem
+}
+
+.g_article2_title {
+    width: 6.91rem;
+    height: 0.82rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.g_article2_title h2 {
+    font-size: 0.2rem;
+    color: #ed3933;
+    margin-top: 0.1rem;
+}
+
+.g_article2_title p {
+    font-size: 0.25rem;
+    color: #101010;
+    margin-bottom: 0.1rem;
+}

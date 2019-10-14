@@ -1,0 +1,156 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+li {
+	list-style: none;
+}
+
+html {
+	font-family:"PingFanSC";
+	font-size: 13.33333vw;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: column;
+}
+
+header {
+	width: 7.5rem;
+	height: 2.3rem;
+	display: flex;
+}
+
+section {
+	flex: 1;
+	justify-content: space-between;
+}
+
+#jiaodiantu {
+	width: 100%;
+	background: #FFFFFF;
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+	height: 7.2rem;
+}
+
+.swipe-wrap {
+	width: 100%;
+	height: 7.1rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.swipe-wrap>div {
+	height: 7.2rem;
+	text-align: center;
+	background: #FFFFFF;
+	float: left;
+	width: 4rem;
+	height: 7.2rem;
+	position: relative;
+}
+
+.swipe-wrap div:nth-child(1) img {
+	margin-top: 1rem;
+	margin-bottom: .5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.swipe-wrap div:nth-child(1) p {
+	line-height: .43rem;
+	font-size: .21rem;
+}
+
+.swipe-wrap h4 {
+	line-height: .43rem;
+	font-size: .21rem;
+}
+
+.swipe-wrap p {
+	line-height: .43rem;
+	font-size: .17rem;
+}
+
+.swipe-wrap img {
+	width: 4rem;
+	height: 4rem;
+	margin-bottom: .13rem;
+}
+
+.xiaoyuandian {
+	list-style: none;
+	position: absolute;
+	bottom: .1rem;
+	right: 2.55rem;
+	width: 2rem;
+	height: .4rem;
+}
+
+.xiaoyuandian li {
+	width: .2rem;
+	height: .2rem;
+	background: #F9F9F9;
+	float: left;
+	margin-right: .1rem;
+	border-radius: .1rem;
+}
+
+.xiaoyuandian li.cur {
+	background: #000000;
+}
+
+footer {
+	width: 7.5rem;
+	height: 3.85rem;
+	background: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#btn_ {
+	color: #FFFFFF;	
+	width: 4.7rem;
+	height: .8rem;
+	background: #000000;
+	font-size: .21rem;
+	margin: 0 auto;
+	margin-top: .35rem;
+	border: 0;
+	border-radius: .15rem;
+}
+
+#btn__ {
+	width: 4.7rem;
+	height: .8rem;
+	background: #FFFFFF;
+	font-size: .21rem;
+	margin: 0 auto;
+	margin-top: .3rem;
+	border: .05rem solid #F9F9F9;
+	border-radius: .15rem;
+	outline: none;
+}
+
+footer p {
+	line-height: .57rem;
+	font-size: .17rem;
+	text-align: center;
+	
+}

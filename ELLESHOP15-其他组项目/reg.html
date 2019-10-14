@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reg.css">
+    <link rel="stylesheet" href="./css/share.css">
+    <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <button></button>
+    </header>
+    <div class="title_container">
+        <img src="./img/title_img.jpg" alt="">
+        <h2>欢迎登陆ELLESHOP账户</h2>
+    </div>
+    <form class="reg_form">
+        <div>
+            <p>+86</p>
+            <input type="text" placeholder="手机号码">
+            <span class="sendcode_btn">发送验证码</span>
+        </div>
+        <input class="user_num" type="text" placeholder="输入6位验证码">
+        <input class="user_pass" class="" type="password" placeholder="密码">
+        <span class="tip_password">数字和字母组成，6-16位</span>
+        <span class="tip_reginfo">用户名已存在</span>
+        <input class="reg_btn" type="button" value="注册" />
+        <p class="href_login"><span>已经是会员？</span><a href="login.html">立即登录</a></p>
+    </form>
+    <footer>
+        <p>注册即表示同意用户协议</p>
+    </footer>
+    <script>
+        // 三个正则判断
+        let regcode = /[0-9]{6}/
+        let regpassword = /^[a-z0-9]{6,16}$/
+        let regphone = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/
+        $('.reg_form div input').change(function () {
+            if (!regphone.test($('.reg_form div input').val())) {
+                $('.reg_form div input').css('border', '0.01rem solid #f00')
+            } else {
+                $('.reg_form div input').css('border', 0)
+            }
+        })
+        $('.user_pass').change(function () {
+            if (!regpassword.test($('.user_pass').val())) {
+                $('.user_pass').css('border', '0.04rem solid #f00')
+                $('.tip_password').css('display', 'block')
+            } else {
+                $('.user_pass').css('border', '0.04rem solid #e5e5e5')
+                $('.tip_password').css('display', 'none')
+            }
+        })
+        $('.user_num').change(function () {
+            if (!regcode.test($('.user_num').val())) {
+                $('.user_num').css('border', '0.04rem solid #f00')
+            } else {
+                $('.user_num').css('border', '0.04rem solid #e5e5e5')
+            }
+        })
+
+
+
+        //验证码
+        // if (regphone.test($('.reg_form div input').val())) {
+        $('.sendcode_btn').click(function () {
+            console.log(111)
+            // 手机号正确以后调用接口发送验证码
+            let sendurl = 'http://106.13.115.175:8080/elleshop/user/sendCode.do'
+            let senddata = {
+                phone: $('.reg_form div input').val()
+            }
+            $.post(sendurl, senddata, (res) => {
+                console.log(res);
+
+
+                // if(res.code==0){
+                //     location.href='login.html'
+                // }else{
+                //     $('.tip_reginfo').css('display','block')
+                // }
+            })
+
+        })
+        // }
+
+        $('.reg_btn').click(function () {
+            if (regphone.test($('.reg_form div input').val()) && regpassword.test($('.user_pass').val()) &&
+                regcode.test($('.user_num').val())) {
+                // 条件满足后发起请求
+                let regurl = 'http://106.13.115.175:8080/elleshop/user/register.do'
+                // http://106.13.115.175:8080/elleshop/user/register.do
+                let regdata = {
+                    phone: $('.reg_form div input').val(),
+                    password: $('.user_pass').val(),
+                    code: $('.user_num').val()
+                }
+                $.post(regurl, regdata, (res) => {
+                    console.log(res)
+                    if (res.code == 0) {
+                        // location.href = 'login.html'
+                    } else {
+                        $('.tip_reginfo').css('display', 'block')
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

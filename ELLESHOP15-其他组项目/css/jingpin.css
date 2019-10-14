@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 13.33333vw;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-size: 0.26rem;
+}
+
+img {
+    display: block;
+}
+
+.big_container {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+.swiper-container {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 1.18rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+
+header ul {
+    width: 6rem;
+    height: 1.1rem;
+}
+
+header ul li {
+    float: left;
+    font-size: 0.24rem;
+    color: #999;
+    padding-right: 0.24rem;
+    line-height: 1.1rem;
+}
+
+header .fangdajing {
+    display: block;
+    width: 0.41rem;
+    height: 0.42rem;
+    background: url(../img/sousuo.jpg);
+    background-size: 0.41rem 0.42rem;
+    margin-top: 0.3rem;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 0.94rem;
+    margin-bottom: 0.25rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    /* flex-shrink: 0; */
+    position: fixed;
+    bottom: 0;
+    background: rgb(255, 255, 255);
+    z-index: 10000;
+}
+
+footer figure {
+    font-size: 0.18rem;
+    /* line-height: 0.94rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #999999;
+}
+
+footer figure .iconfont {
+    font-size: 0.39rem;
+    text-align: center;
+    color: #999999;
+}
+
+footer figure:nth-child(2) {
+    font-weight: 600;
+    color: #101010;
+}
+
+footer img {
+    width: 1.52rem;
+    height: 1.52rem;
+    position: absolute;
+    left: 2.9rem;
+    bottom: -0.25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #eee;
+}
+
+/* --------底部结束----------- */
+
+.quanbu {
+    padding: 0 0.3rem;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.quanbu article:nth-child(1) {
+    width: 6.9rem;
+    height: 3.8rem;
+    margin-top: 0.2rem;
+}
+
+.quanbu article:nth-child(1) img {
+    width: 6.9rem;
+    height: 3.8rem;
+    border-radius: 0.06rem;
+}
+
+.quanbu article:nth-child(2) {
+    width: 6.9rem;
+    height: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.quanbu article:nth-child(2) img {
+    width: 6.9rem;
+    height: 1.2rem;
+    border-radius: 0.06rem;
+}
+
+.quanbu article:nth-child(3) {
+    width: 6.9rem;
+    height: 3.6rem;
+    margin-top: 0.2rem;
+}
+
+.quanbu article:nth-child(3) img:nth-child(1) {
+    width: 3.35rem;
+    height: 3.6rem;
+    float: left;
+}
+
+.quanbu article:nth-child(3) img:nth-child(2) {
+    width: 3.35rem;
+    height: 1.7rem;
+    float: right;
+}
+
+.quanbu article:nth-child(3) img:nth-child(3) {
+    width: 3.35rem;
+    height: 1.7rem;
+    float: right;
+}
+
+.quanbu article:nth-child(4) {
+    width: 6.9rem;
+    height: 1.7rem;
+    margin-top: 0.2rem;
+}
+
+.quanbu article:nth-child(4) img {
+    width: 6.9rem;
+    height: 1.7rem;
+}
+
+.quanbu div {
+    width: 100%;
+    height: 1.22rem;
+    display: flex;
+    padding-left: 2.08rem;
+}
+
+.quanbu div p {
+    width: 0.56rem;
+    height: 0.04rem;
+    background: #a1a1a1;
+    margin-top: 0.6rem;
+}
+
+.quanbu span {
+    line-height: 1.22rem;
+    padding: 0 0.21rem;
+}
+
+/* 以下新品 */
+
+.xinpin {
+    width: 100%;
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+
+.xinpin article:nth-child(1) {
+    width: 6.9rem;
+    height: 3.8rem;
+    margin-top: 0.2rem;
+}
+
+.xinpin article:nth-child(1) img {
+    width: 6.9rem;
+    height: 3.8rem;
+}
+
+.xinpin article:nth-child(2) {
+    width: 100%;
+    height: 2.72rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+}
+
+.xinpin article:nth-child(2) figure {
+    text-align: center;
+}
+
+.xinpin article:nth-child(2) img {
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+.xinpin article:nth-child(2) figcaption {
+    font-size: 0.23rem;
+    line-height: 0.6rem;
+    color: #101010;
+}
+
+.xinpin article:nth-child(3) {
+    width: 6.9rem;
+    height: 3.8rem;
+    margin-top: 0.3rem;
+}
+
+.xinpin article:nth-child(3) img {
+    width: 6.9rem;
+    height: 3.8rem;
+}
+
+.xinpin article:nth-child(4) {
+    width: 100%;
+    height: 2.72rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+}
+
+.xinpin article:nth-child(4) figure {
+    text-align: center;
+}
+
+.xinpin article:nth-child(4) img {
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+.xinpin article:nth-child(4) figcaption {
+    font-size: 0.23rem;
+    line-height: 0.6rem;
+    color: #101010;
+}
+
+/* 以下潮流Girl */
+
+.girl {
+    flex: 1;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0 0.3rem;
+}
+
+.girl article:nth-child(1) {
+    width: 100%;
+    height: 3.55rem;
+    margin-top: 0.2rem;
+}
+
+.girl article:nth-child(1) img {
+    width: 6.9rem;
+    height: 3.55rem;
+}
+
+.girl article:nth-child(2) {
+    width: 6.9rem;
+    height: 3.5rem;
+    margin-top: 0.2rem;
+}
+
+.girl article:nth-child(2) div {
+    display: flex;
+    justify-content: space-between;
+    width: 6.9rem;
+    height: 2.1rem;
+    margin-bottom: 0.27rem;
+}
+
+.girl article:nth-child(2) img {
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+.girl article:nth-child(2) p {
+    line-height: 0.39rem;
+}
+
+.girl article:nth-child(2) p:nth-child(2) {
+    color: #f00;
+}
+
+.girl article:nth-child(2) p:nth-child(3) {
+    color: #101010;
+}
+
+.girl article:nth-child(2) p:nth-child(4) {
+    color: #9f9f9f;
+}
+
+.girl article:nth-child(3) {
+    margin-top: 0.37rem;
+}
+
+.girl article:nth-child(3) div {
+    width: 6.9rem;
+    height: 4.5rem;
+    margin-bottom: 0.27rem;
+}
+
+.girl article:nth-child(3) div img:nth-child(1) {
+    width: 4.5rem;
+    height: 4.5rem;
+    float: left;
+}
+
+.girl article:nth-child(3) div img:nth-child(2) {
+    width: 2.1rem;
+    height: 2.1rem;
+    float: right;
+}
+
+.girl article:nth-child(3) div img:nth-child(3) {
+    width: 2.1rem;
+    height: 2.1rem;
+    float: right;
+}
+
+.girl article:nth-child(3) p {
+    line-height: 0.39rem;
+}
+
+.girl article:nth-child(3) p:nth-child(2) {
+    color: #f00;
+}
+
+.girl article:nth-child(3) p:nth-child(3) {
+    color: #101010;
+}
+
+.girl article:nth-child(3) p:nth-child(4) {
+    color: #9f9f9f;
+}
+
+/* 生活页 */
+.shenghuo {
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+
+.shenghuo figure {
+    width: 6.9rem;
+    height: 6.46rem;
+    margin-top: 0.27rem;
+}
+
+.shenghuo figure img {
+    width: 6.9rem;
+    height: 6.46rem;
+}
+
+.shenghuo figure div {
+    position: absolute;
+}
+
+/* 圈子页 */
+.quanzi .touxiang {
+    width: 100%;
+    height: 2.6rem;
+    background: #f9f9f9;
+    padding: 0.3rem 0.3rem;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.quanzi .touxiang figure {
+    text-align: center;
+}
+
+.quanzi .touxiang img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.quanzi .touxiang figcaption {
+    font-size: 0.2rem;
+    margin-top: 0.19rem;
+    color: #999999;
+}
+
+.quanzi .moment {
+    width: 100%;
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+
+.quanzi .moment .container {
+    width: 6.9rem;
+    padding-top: 0.4rem;
+    box-sizing: border-box;
+    border-bottom: 0.02rem solid #eee;
+}
+
+.quanzi .moment .title {
+    width: 6.9rem;
+    height: 0.8rem;
+    display: flex;
+    position: relative;
+}
+
+.quanzi .moment .title img {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.3rem;
+}
+
+.quanzi .moment .title p span {
+    display: block;
+}
+
+.quanzi .moment .title button {
+    position: absolute;
+    width: 1.12rem;
+    height: 0.48rem;
+    border: 0;
+    background: #fff;
+    box-sizing: border-box;
+    border: 0.02rem solid #ed3933;
+    border-radius: 0.06rem;
+    right: 0;
+    top: 0.16rem;
+}
+
+.quanzi .moment .content .words {
+    line-height: 0.8rem;
+}
+
+.quanzi .moment .content .picture {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quanzi .moment .picture img {
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+.quanzi .weizhi {
+    line-height: 0.7rem;
+}
+
+.quanzi .weizhi span:nth-child(1) {
+    font-size: 0.28rem;
+    margin-right: 0.16rem;
+}
+
+.quanzi .weizhi span:nth-child(2) {
+    font-size: 0.14rem;
+}
+
+.quanzi .pinglun {
+    position: relative;
+    display: flex;
+    width: 6.9rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    margin-bottom: 0.18rem;
+}
+
+.quanzi .pinglun p span:nth-child(1) {
+    font-size: 0.36rem;
+    color: #999;
+}
+
+.quanzi .pinglun p span:nth-child(2) {
+    font-size: 0.19rem;
+    color: #101010;
+}
+
+.quanzi .pinglun img {
+    width: 1.4rem;
+    height: 0.6rem;
+    margin-top: 0.09rem;
+    margin-right: 0.2rem;
+}
+
+.quanzi .pinglun_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.35rem;
+}

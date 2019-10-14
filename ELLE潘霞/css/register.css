@@ -1,0 +1,173 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+header {
+    height: 2.37rem;
+}
+
+section {
+    flex: 1;
+}
+
+.logo1 {
+    width: 100%;
+    height: 2.8rem;
+    font-size: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo1 img {
+    width: 1.3rem;
+    height: 1.03rem;
+}
+
+.logo1 p:last-child {
+    width: 100%;
+    height: 1.17rem;
+    color: #101010;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.17rem
+}
+
+.biao {
+    height: 5.42rem;
+    font-size: 0.31rem;
+}
+
+.biao div {
+    height: 3.17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center
+}
+
+.biao div aside:first-child {
+    width: 6.02rem;
+    height: 0.72rem;
+    border: 0;
+    border: 0.04rem solid #e5e5e5;
+    border-radius: 0.08rem;
+    display: flex
+}
+
+.biao div aside:first-child input:nth-of-type(1) {
+    width: 3.20rem;
+    border: 0;
+    font-size: 0.24rem
+}
+
+.biao div aside:first-child input:nth-of-type(2) {
+    width: 1.77rem;
+    border: 0;
+    font-size: 0.25rem;
+    color: #101010
+}
+
+.biao div aside:first-child p {
+    width: 1.05rem;
+    text-align: center;
+    font-size: 0.2rem;
+    color: #101010;
+    font-weight: 600;
+    line-height: 0.72rem;
+    font-size: 0.24rem
+}
+
+.biao div p input {
+    width: 6.02rem;
+    height: 0.72rem;
+    border: 0;
+    border: 0.04rem solid #e5e5e5;
+    border-radius: 0.08rem;
+    font-size: 0.24rem
+}
+
+.zhuc {
+    width: 100%;
+    height: 2.25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0.42rem;
+    align-items: center
+}
+
+.zhuc input {
+    width: 6.02rem;
+    height: 0.72rem;
+    border: 0;
+    border: 0.04rem solid #101010;
+    border-radius: 0.08rem;
+    font-size: 0.24rem;
+    background: #101010;
+    color: #ffffff;
+    font-size: 0.28rem;
+}
+
+.zhuc p {
+    width: 100%;
+    height: 0.93rem;
+    line-height: 0.93rem;
+    text-align: center;
+    color: #999999
+}
+
+footer {
+    height: 4.21rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.19rem;
+    color: #999999
+}
+
+.zhuc p a {
+    color: #101010;
+    font-weight: 600;
+    text-decoration: underline
+}

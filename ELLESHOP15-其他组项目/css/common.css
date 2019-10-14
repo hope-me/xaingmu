@@ -1,0 +1,55 @@
+header,
+nav,
+section,
+figure,
+body,
+h1,
+h2,
+h3,
+h4,
+ol,
+li,
+img,
+figcaption,
+.iconfont,
+ul,
+dl,
+dt,
+dd,
+nav,
+div,
+header,
+article,
+input,
+p,
+a,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 13.3333vw;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+}

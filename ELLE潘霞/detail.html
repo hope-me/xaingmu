@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>商品详情页</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="swiper/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="css/121.css">
+	<link rel="stylesheet" type="text/css" href="font_l44ykp8rawg/iconfont.css" />
+	<style>
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		p,
+		ul,
+		ol,
+		li,
+		dl,
+		dt,
+		dd,
+		form,
+		figure {
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		img {
+			display: block;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		b {
+			font-weight: normal;
+		}
+
+		html {
+			font-size: 13.333vw;
+		}
+
+		html,
+		body {
+			height: 100%;
+			background: #eee;
+		}
+
+		.share {
+			width: 7.5rem;
+			height: 2rem;
+			position: fixed;
+			bottom: 0;
+			border-radius: .1rem .1rem 0 0;
+			background: #fff;
+			display: none;
+		}
+
+		.share div:first-of-type {
+			height: 1.27rem;
+			border-bottom: .01rem solid #f9f9f9;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			text-align: center;
+		}
+
+		.share dl {
+			width: 1rem;
+			height: .9rem;
+			padding-top: .1rem;
+		}
+
+		.share dd {
+			font-size: .22rem;
+			color: #999999;
+			margin-top: .1rem;
+		}
+
+		.img1 {
+			width: 0.5rem;
+			height: 0.5rem;
+			margin: 0 auto;
+		}
+
+		.img2 {
+			width: 0.54rem;
+			height: 0.46rem;
+			margin: 0 auto;
+		}
+
+		.img3 {
+			width: 0.54rem;
+			height: 0.47rem;
+			margin: 0 auto;
+		}
+
+		.img4 {
+			width: 0.44rem;
+			height: 0.5rem;
+			margin: 0 auto;
+		}
+
+		.share div:last-of-type {
+			height: 0.71rem;
+			font-size: .2rem;
+			color: #999999;
+			text-align: center;
+			line-height: .71rem;
+			border-top: .01rem solid #f9f9f9;
+		}
+
+		.insert {
+			width: 7.5rem;
+			height: 6.08rem;
+			position: fixed;
+			bottom: 0;
+			border-radius: .1rem .1rem 0 0;
+			background: #fff;
+			display: none;
+		}
+
+		.i-one {
+			height: 2.76rem;
+			width: 6.9rem;
+			border-bottom: 0.04rem solid #eeeeee;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+		}
+
+		.goods-img {
+			width: 1.94rem;
+			height: 1.94rem;
+			background: #eeeeee;
+			margin-left: .3rem;
+			margin-right: .6rem;
+		}
+
+		.goods-img img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.g-logo {
+			font-size: .22rem;
+			color: #141414;
+			width: 3rem;
+			margin: 0 0 .2rem;
+		}
+
+		.g-name {
+			font-size: .22rem;
+			color: #141414;
+			width: 3rem;
+			margin: 0 0 .2rem;
+		}
+
+		.g-price {
+			font-size: .22rem;
+			color: #ed3933;
+			width: 3rem;
+			margin: 0 0 .2rem;
+		}
+
+		.g-amount {
+			font-size: .22rem;
+			color: #e8b32a;
+			width: 3rem;
+		}
+
+		.cancel-i {
+			color: #101010;
+			font-size: .28rem;
+			align-self: flex-start;
+			margin-top: .3rem;
+			margin-left: .9rem;
+		}
+
+		.i-two {
+			height: 0.76rem;
+			width: 6.9rem;
+			border-bottom: 0.04rem solid #eeeeee;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		.i-color,
+		.i-size {
+			width: 1rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.color-s {
+			font-size: .22rem;
+			color: #101010;
+		}
+
+		.color-o {
+			width: 0.16rem;
+			height: 0.1rem;
+		}
+
+		.size-s {
+			font-size: .22rem;
+			color: #101010;
+		}
+
+		.size-o {
+			width: 0.16rem;
+			height: 0.1rem;
+		}
+
+		.fenge {
+			font-size: .5rem;
+			color: #eeeeee;
+		}
+
+		.i-thr {
+			height: 0.76rem;
+			width: 6.9rem;
+			border-bottom: 0.04rem solid #eeeeee;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		.i-thr .subBtn,
+		.i-thr .addBtn,
+		.i-thr .numIpt {
+			border: none;
+			outline: none;
+			text-align: center;
+		}
+
+		.i-thr .subBtn,
+		.i-thr .addBtn {
+			background: #f9f9f9;
+			width: 0.5rem;
+			height: 0.5rem;
+		}
+
+		.i-for {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.i-cart,
+		.i-buy {
+			width: 3.24rem;
+			height: 0.8rem;
+			background: #eeeeee;
+			color: #101010;
+			font-size: .28rem;
+			border-radius: .1rem;
+			margin-top: .64rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#imgitem img {
+			width: 100%;
+			height: 7.6rem;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<!-- <div class="container" style="width: 100%;height:7.6rem;">
+				
+				<div class="row">
+					<div class="col-lg-12">
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+							</ol>
+							
+							<div id="imgitem" class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="img/1.jpg">
+								</div>
+								<div class="item">
+									<img src="img/2.jpg" alt="">
+								</div>
+								<div class="item">
+									<img src="img/3.jpg" alt="">
+								</div>
+								<div class="item">
+									<img src="img/3.jpg" alt="">
+								</div>
+								<div class="item">
+									<img src="img/3.jpg" alt="">
+								</div>
+							</div>
+							
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/-3.jpg"
+						style="width: 100%;height:6.75rem;border-radius:0.2rem;"></div>
+				<div class="swiper-slide"><img src="img/-3.jpg" style="width: 100%;height:6.75rem;border-radius:0.2rem">
+				</div>
+				<div class="swiper-slide"><img src="img/2.jpg" style="width: 100%;height:6.75rem;border-radius:0.2rem">
+				</div>
+				<div class="swiper-slide"><img src="img/3.jpg" style="width: 100%;height:6.75rem;border-radius:0.2rem;">
+				</div>
+				<div class="swiper-slide"><img src="img/-3.jpg"
+						style="width: 100%;height:6.75rem;border-radius:0.2rem;"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="price">
+			<!-- <h3>NANAWANG</h3>
+			<p>情色少女蓝卫衣</p>
+			<p>￥299</p> -->
+		</div>
+
+		<div class="nav">
+			<figure>
+				<p class="iconfont icon-heart"></p>
+				<figcaption>收藏</figcaption>
+			</figure>
+
+			<figure>
+				<p class="iconfont icon-icon-"></p>
+				<figcaption>视频</figcaption>
+			</figure>
+
+			<figure class="share-btn">
+				<p class="iconfont icon-13"></p>
+				<figcaption>分享</figcaption>
+			</figure>
+		</div>
+
+
+
+
+		<div class="nav-1">
+			<div><img src="img/-2.jpg" alt=""></div>
+			<h3>NANAWANG</h3>
+		</div>
+
+		<div class="nav-11">
+			<p>pJSK SJKDA HSJSA 产品信息<span class="iconfont  icon-fanhui"></span> </p>
+			<p>SIAHS SJJJA 尺码指南<span class="iconfont  icon-fanhui"></span></p>
+		</div>
+
+
+		<div class="nana">
+			<div class="cloth">
+				<img src="img/-1.jpg">
+			</div>
+			<div class="logo">
+				<div class="nice">
+					<img src="img/001.jpg">
+				</div>
+			</div>
+		</div>
+
+		<div class="introduce">
+			<h2>品牌及设计师简介</h2>
+			<div class="paragraph">
+				<p>我都好久海淀区文化打击没看时间能接受的就行吧看看刹车那就看你急市场价你看见安徽科技和打比较好会都计划将参加哦我回答苦海加哦我回答苦海
+					我都好久海淀区文化打击没看时间能接受的就行吧看看刹车那就看你急市场价你看见安徽科技和打比较好几点睡裤支持下可寄回去收款会都计划将参加哦我回答苦海！
+				</p>
+			</div>
+		</div>
+		<div class="like">
+			<h3>猜你喜欢</h3>
+			<a>15件商品</a>
+		</div>
+		<div class="guess">
+			<figure>
+				<img src="img/002.jpg">
+				<figcaption>
+					<h2>NANAWANG &nbsp;&nbsp;&nbsp;SEXY</h2>
+					<p>刺绣设计毛呢短裤短裙</p>
+					<p>￥399 <span class="iconfont icon-heart"></span></p>
+				</figcaption>
+			</figure>
+			<figure>
+				<img src="img/002.jpg">
+				<figcaption>
+					<h2>NANAWANG &nbsp;&nbsp;&nbsp;SEXY</h2>
+					<p>刺绣设计毛呢短裤短裙</p>
+					<p>￥399 <span class="iconfont icon-heart"></span></p>
+				</figcaption>
+			</figure>
+			<!-- <figure>
+					<figcaption></figcaption>
+				</figure> -->
+		</div>
+		<!-- <div class="swiper-container1">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/002.jpg" style="width: 100%;"></div>
+					<div class="swiper-slide"><img src="img/002.jpg" style="width: 100%;" ></div>
+					<div class="swiper-slide"><img src="img/002.jpg" style="width: 100%;"></div>
+					<div class="swiper-slide"><img src="img/002.jpg" style="width: 100%;"></div>
+					<div class="swiper-slide"><img src="img/002.jpg" style="width: 100%;"></div>
+				</div>
+			</div> -->
+
+		<!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+		<!-- </div> -->
+		<div class="cart">
+			<button class="add" type="button">加入购物车</button>
+			<button class="buy" type="button">立即购买</button>
+		</div>
+	</section>
+	<div class="share">
+		<div>
+			<dl>
+				<dt>
+					<img src="img/00111.jpg" class="img1" />
+				</dt>
+				<dd>朋友圈</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="img/00222.jpg" class="img2" />
+				</dt>
+				<dd>微信</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="img/00333.jpg" class="img3" />
+				</dt>
+				<dd>微博</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="img/00444.jpg" class="img4" />
+				</dt>
+				<dd>QQ</dd>
+			</dl>
+		</div>
+		<div class="cancel-s">取消</div>
+	</div>
+	<div class="insert">
+		<div class="i-one">
+			<div class="goods-img"></div>
+			<div class="goods-main">
+				<!-- <h3 class="g-logo">尾巴</h3>
+				<h3 class="g-name">嘿咻</h3>
+				<h4 class="g-price">￥199</h4>
+				<h4 class="g-amount">库存紧张</h4> -->
+			</div>
+			<div class="cancel-i">X</div>
+		</div>
+		<div class="i-two">
+			<div class="i-color">
+				<select class="color-s">
+					<!-- <option>蓝色</option> -->
+				</select>
+			</div>
+			<span class="fenge">|</span>
+			<div class="i-size">
+				<select class="size-s">
+					<!-- <option>XXL</option> -->
+				</select>
+			</div>
+		</div>
+		<div class="i-thr">
+			<button class="subBtn">-</button>
+			<input type="text" class="numIpt" value="1" />
+			<button class="addBtn">+</button>
+		</div>
+		<div class="i-for">
+			<div class="i-cart">加入购物车</div>
+			<div class="i-buy">立即购买</div>
+		</div>
+	</div>
+	<div class="tiao"></div>
+
+	<script>
+		$(function () {
+			var url = 'http://106.13.115.175:8080/elleshop/goods/findGoodsById.do'
+			let goodsId = 1
+			//parseInt(Math.random() * 2 + 1)
+			$.ajax({
+				url: url,
+				type: 'get',
+				data: {
+					goodsId,
+				},
+				//请求成功
+				success: function (res) {
+					console.log(res);
+					let arr = []
+					arr.push(res.info)
+					console.log(arr)
+					let html = arr.map(v => `
+						<h3>${v.goodsMsg}</h3>
+						<p>${v.goodsName}</p>
+						<p>${v.minPrice}</p>
+					`).join('')
+					$('.price').html(html)
+					let html0 = arr.map(v => `
+						<img src="${v.goodsImgUrl}" />
+					`)
+					$('.goods-img').html(html0)
+					let html1 = arr.map(v => `
+						<h3 class="g-logo">${v.goodsMsg}</h3>
+						<h3 class="g-name">${v.goodsName}</h3>
+						<h4 class="g-price">${v.minPrice}</h4>
+						<h4 class="g-amount">库存紧张</h4>
+					`)
+					$('.goods-main').html(html1)
+					console.log(res.info.colorList)
+					let html2 = res.info.colorList.map(v => `
+						<option dota="${v.colorId}">${v.colorName}</option>
+					`)
+					$('.color-s').html(html2)
+					let html3 = res.info.sizeList.map(v => `
+						<option dota="${v.sizeId}">${v.sizeName}</option>
+					`)
+					$('.size-s').html(html3)
+
+					var url = 'http://106.13.115.175:8080/elleshop/goodsType/findGoodsTypeByCZ.do'
+					let colorId = document.querySelector('.color-s option').getAttribute('dota')
+					let sizeId = document.querySelector('.size-s option').getAttribute('dota')
+					console.log(colorId)
+					console.log(sizeId)
+					$.ajax({
+						url: url,
+						type: 'get',
+						data: {
+							colorId,
+							sizeId
+						},
+						//请求成功
+						success: function (res) {
+							console.log(res);
+							$('.g-price').html(res.info.price)
+							$('.g-amount').html(res.info.inventoryNum)
+						},
+						//请求失败
+						error: function (error) {
+							console.log(error);
+						}
+					});
+					$('.color-s').change(function () {
+						var url =
+							'http://106.13.115.175:8080/elleshop/goodsType/findGoodsTypeByCZ.do'
+						//document.querySelector('.color-s option')
+						let colorId = $("select option:selected").attr(
+							'dota')
+						// let sizeId = $("select option:selected").attr(
+						// 	'dota')
+						console.log(colorId)
+						console.log(sizeId)
+						$.ajax({
+							url: url,
+							type: 'get',
+							data: {
+								colorId,
+								sizeId
+							},
+							//请求成功
+							success: function (res) {
+								console.log(res);
+								$('.g-price').html(res.info.price)
+								$('.g-amount').html(res.info.inventoryNum)
+							},
+							//请求失败
+							error: function (error) {
+								console.log(error);
+							}
+						});
+					})
+					$('.size-s').change(function () {
+						var url =
+							'http://106.13.115.175:8080/elleshop/goodsType/findGoodsTypeByCZ.do'
+						// let colorId = $("select option:selected").attr(
+						// 	'dota')
+						let media = $("select option:selected")[1]
+						let sizeId = $(media).attr(
+							'dota')
+						console.log(colorId)
+						console.log(sizeId)
+						$.ajax({
+							url: url,
+							type: 'get',
+							data: {
+								colorId,
+								sizeId
+							},
+							//请求成功
+							success: function (res) {
+								console.log(res);
+								$('.g-price').html(res.info.price)
+								$('.g-amount').html(res.info.inventoryNum)
+							},
+							//请求失败
+							error: function (error) {
+								console.log(error);
+							}
+						});
+					})
+				},
+				//请求失败
+				error: function (error) {
+					console.log(error);
+				}
+			})
+		})
+		window.onload = function () {
+			getRem(750, 100)
+		};
+		window.onresize = function () {
+			getRem(750, 100)
+		};
+
+		function getRem(pwidth, prem) {
+			var html = document.getElementsByTagName("html")[0];
+			var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+			html.style.fontSize = oWidth / pwidth * prem + "px";
+		}
+
+
+
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: true, //可选选项，自动滑动
+
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		})
+
+		// new Swiper('.swiper-container')
+		// var mySwiper = document.querySelector('.swiper-container').swiper
+		// mySwiper.slideNext();
+
+		var mySwiper = new Swiper('.swiper-container1', {
+			autoplay: false, //可选选项，自动滑动
+		})
+		$('.share-btn').click(() => {
+			//console.log(123)
+			$('.share').css({
+				display: 'block'
+			})
+		})
+		$('.cancel-s').click(() => {
+			//console.log(123)
+			$('.share').css({
+				display: 'none'
+			})
+		})
+		$('.add,.buy').click(() => {
+			//console.log(123)
+
+			$('.insert').css({
+				display: 'block'
+			})
+		})
+		$('.cancel-i').click(() => {
+			//console.log(123)
+			$('.insert').css({
+				display: 'none'
+			})
+		})
+	</script>
+
+
+
+
+</body>
+
+</html>

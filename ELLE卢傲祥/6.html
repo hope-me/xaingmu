@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>品类</title>
+
+    <link rel="stylesheet" href="css/6.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <i class="iconfont icon-sousuo1 start"></i>
+            <input type="text" placeholder="搜索分类、品牌、商品">
+        </div>
+    </header>
+
+
+
+    <section>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="6.html" style="color: #000"> 品类</a>
+                </li>
+                <li>
+                    <a href="7.html">品牌类</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="nav-1">
+            <div class="nav-01">
+                <ul>
+                    <li>女装时尚</li>
+                    <li>男装精品</li>
+                    <li>护肤彩妆</li>
+                    <li>时尚运动</li>
+                    <li>潮流配饰</li>
+                    <li>孩童母婴</li>
+                    <li>生活家居</li>
+                    <li>食品保健</li>
+                </ul>
+            </div>
+            <div class="nav-02">
+                <div class="nav-022">
+                    <a href=""><img src="" alt=""></a>
+                </div>
+                <div class="nav-03">
+                    <!-- <h3>---裙装---</h3>
+                    <ul class="nav-03-01">
+                        <li>
+                            <img src="img/4.jpg" alt="">
+                            <p>连衣裙</p>
+                        </li>
+                        <li>
+                            <img src="img/4.jpg" alt="">
+                            <p>半身裙</p>
+                        </li>
+                        <li>
+                            <img src="img/6.jpg" alt="">
+                            <p>迷你裙</p>
+                        </li>
+                        <li>
+                            <img src="img/7.jpg" alt="">
+                            <p>礼服</p>
+                        </li>
+                        <li>
+                            <img src="img/8.jpg" alt="">
+                            <p>牛仔裤</p>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <figure>
+            <p class="iconfont icon-shouye"></p>
+            <figcaption>精选</figcaption>
+        </figure>
+        <figure>
+            <p class="iconfont icon-sousuo"></p>
+            <figcaption>分类</figcaption>
+        </figure>
+        <div class="loot"><img src="img/2.jpg" alt=""></div>
+        <figure>
+            <p class="iconfont icon-gouwuche"></p>
+            <figcaption>购物车</figcaption>
+        </figure>
+        <figure>
+            <p class="iconfont icon-wode"></p>
+            <figcaption>账号</figcaption>
+        </figure>
+    </footer>
+
+    <script>
+        $('.icon-shouye').hover(function () {
+            window.location.href = "../ELLE潘霞/jx_all.html"
+        })
+        $('.icon-sousuo').hover(function () {
+            window.location.href = "../ELLE卢傲祥/6.html"
+        })
+        $('.icon-gouwuche').hover(function () {
+            window.location.href = "../ELLE丁涛/cart.html"
+        })
+        $('.icon-wode').hover(function () {
+            window.location.href = "../ELLE丁涛/wode.html"
+        })
+        $('.nav-01 ul li').click(function (e) {
+            var url = 'http://106.13.115.175:8080/elleshop/category/categoryList.do'
+            $.ajax({
+                url: url,
+                type: 'get',
+                //请求成功
+                success: function (res) {
+                    console.log(res)
+                    console.log(res.info.length)
+                    console.log(res.info[1])
+                    console.log(res.info[0].classList)
+                    console.log(res.info[0].classList.length)
+                    console.log(res.info[0].classList[0].kindList)
+                    console.log(res.info[0].classList[1].kindList)
+                    console.log($(e.target).index())
+                    if ($(e.target).index() == 0) {
+                        console.log(0)
+                        let nav03 = document.querySelector('.nav-03')
+                        //console.log(i)
+                        let html = res.info[0].classList.map((v, i) => `
+                            <h3>---${v.className}---</h3>
+                            <ul class="nav-03-${i}">
+                               
+                            </ul>
+                            `).join('')
+                        $('.nav-03').html(html)
+                        // for (let j = 0; j <= i;j++) {
+                        //     console.log(i)
+                        //     console.log(j)
+                        // }
+                        html0 = res.info[0].classList[0].kindList.map((v, i) => `
+                                <li dota="${v.kindId}">
+                                    <img src="img/4.jpg" alt="">
+                                    <p>${v.kindName}</p>
+                                </li>
+                            `).join('')
+                        html1 = res.info[0].classList[1].kindList.map((v, i) => `
+                                <li>
+                                    <img src="img/4.jpg" alt="">
+                                    <p>${v.kindName}</p>
+                                </li>
+                            `).join('')
+                        html2 = res.info[0].classList[2].kindList.map((v, i) => `
+                                <li>
+                                    <img src="img/4.jpg" alt="">
+                                    <p>${v.kindName}</p>
+                                </li>
+                            `).join('')
+                        //console.log(i)
+                        $('.nav-03-0').html(html0)
+                        $('.nav-03-1').html(html1)
+                        $('.nav-03-2').html(html2)
+                    }
+                    if ($(e.target).index() == 1) {
+                        console.log(1)
+                        let nav03 = document.querySelector('.nav-03')
+                        //console.log(i)
+                        let html = res.info[1].classList.map((v, i) => `
+                            <h3>---${v.className}---</h3>
+                            <ul class="nav-03-${i}">
+                               
+                            </ul>
+                            `).join('')
+                        $('.nav-03').html(html)
+                        // for (let j = 0; j <= i;j++) {
+                        //     console.log(i)
+                        //     console.log(j)
+                        // }
+                        html0 = res.info[1].classList[0].kindList.map((v, i) => `
+                                <li>
+                                    <img src="img/4.jpg" alt="">
+                                    <p>${v.kindName}</p>
+                                </li>
+                            `).join('')
+                        html1 = res.info[1].classList[1].kindList.map((v, i) => `
+                                <li>
+                                    <img src="img/4.jpg" alt="">
+                                    <p>${v.kindName}</p>
+                                </li>
+                            `).join('')
+                        html2 = res.info[1].classList[2].kindList.map((v, i) => `
+                                <li>
+                                    <img src="img/4.jpg" alt="">
+                                    <p>${v.kindName}</p>
+                                </li>
+                            `).join('')
+                        //console.log(i)
+                        $('.nav-03-0').html(html0)
+                        $('.nav-03-1').html(html1)
+                        $('.nav-03-2').html(html2)
+                    }
+                },
+                //请求失败
+                error: function (error) {
+                    console.log(error);
+                }
+            })
+        })
+        $(document).on('click', 'li[dota]', function () {
+            console.log(123)
+            window.location.href = "../ELLE潘霞/detail.html"
+        })
+    </script>
+
+</body>
+
+</html>

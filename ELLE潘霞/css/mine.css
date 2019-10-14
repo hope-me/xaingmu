@@ -1,0 +1,359 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 大块区域 */
+
+#section {
+    flex: 1;
+    margin: 0 auto;
+    overflow: auto;
+    background: #f1f1f1;
+}
+
+#header {
+    height: 3.4rem;
+    width: 7.5rem;
+    position: relative;
+    background: #120c0d;
+    display: flex;
+}
+
+#header_img {
+    height: 1.38rem;
+    width: 1.38rem;
+    border-radius: 50%;
+    border: solid 1px #ec3933;
+    margin-top: 0.78rem;
+    margin-left: 0.6rem;
+    background: #fff;
+}
+
+#header_name {
+    margin-left: 0.19rem;
+    height: 1.4rem;
+    margin-top: 0.78rem;
+}
+
+#header_name h2 {
+    height: 0.26rem;
+    margin-top: 0.33rem;
+    color: #fff;
+    font-size: 0.26rem;
+}
+
+#header_name p {
+    width: 2.3rem;
+    height: 0.38rem;
+    font-size: 0.2rem;
+    color: #fff;
+    background: #4f4746;
+    border-radius: 0.2rem;
+    margin-top: 0.26rem;
+    text-align: center;
+    line-height: 0.26rem;
+}
+
+
+/* 我的订单 */
+
+#indent {
+    height: 1.95rem;
+    width: 6.28rem;
+    background: #fff;
+    position: absolute;
+    left: 0.3rem;
+    bottom: -1.85rem;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.31rem;
+}
+
+#indent_top {
+    height: 0.28rem;
+    font-size: 0.28rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.16rem;
+}
+
+#indent_top a {
+    text-decoration: none;
+}
+
+#indent_button {
+    margin-top: 0.5rem;
+    height: 0.85rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+#indent_button figcaption {
+    font-size: 0.23rem;
+}
+
+#indent_button figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#indent_button figure .iconfont {
+    font-size: 0.4rem;
+}
+
+#indent_button figure:nth-child(1) .iconfont {
+    font-weight: 900;
+}
+
+#indent_button figure:nth-child(3) .iconfont {
+    font-weight: 900;
+}
+
+#indent_button figure:nth-child(2) .iconfont {
+    font-weight: 900;
+}
+
+#indent_button figure:nth-child(4) .iconfont {
+    font-weight: 900;
+}
+
+#indent_button figure:nth-child(5) .hongqiu {
+    height: 0.24rem;
+    width: 0.24rem;
+    background: #ed3933;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 0.2rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.24rem;
+    font-size: 0.15rem;
+}
+
+.hongqiu {
+    height: 0.24rem;
+    width: 0.24rem;
+    background: #ed3933;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 0.05rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.24rem;
+    font-size: 0.15rem;
+}
+
+
+/* 我的资产 */
+
+#property {
+    height: 1.72rem;
+    width: 6.28rem;
+    background: #fff;
+    margin: 2.15rem auto 0;
+    border-radius: 0.2rem;
+    padding: 0.47rem 0.31rem 0.37rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#property_top {
+    height: 0.28rem;
+    font-size: 0.28rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#property_top a {
+    color: #999;
+}
+
+#property_button {
+    height: 1.13rem;
+    margin-top: 0.32rem;
+    display: flex;
+    justify-content: space-between
+}
+
+#property_button_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 1.42rem
+}
+
+#property_button_left h2 {
+    font-size: 0.23rem;
+}
+
+#property_button_left span {
+    font-size: 0.35rem;
+}
+
+#property_button_right {
+    width: 1.92rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#property_button_right figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#property_button_right figure .iconfont {
+    font-size: 0.33rem;
+}
+
+#property_button_right figure figcaption {
+    font-size: 0.23rem;
+}
+
+#imglogo {
+    height: 1.40rem;
+    width: 6.9rem;
+    margin: 0.3rem auto 0;
+}
+
+#imglogo img {
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+
+/* 我的常用 */
+
+#common {
+    height: 1.86rem;
+    width: 6.28rem;
+    background: #fff;
+    border-radius: .2rem;
+    margin: 0.3rem auto 0;
+    padding: 0.31rem;
+}
+
+#common h2 {
+    font-size: 0.28rem;
+}
+
+#common div {
+    display: flex;
+    justify-content: space-between;
+    height: 1.12rem;
+    margin-top: 0.12rem;
+}
+
+#common div figcaption {
+    font-size: 0.23rem;
+}
+
+#common div figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center
+}
+
+#common div figure .iconfont {
+    font-size: 0.38rem;
+    font-weight: 900;
+}
+
+
+/* 尾部 */
+
+#footer {
+    height: 1.65rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#footer_nav {
+    height: 0.94rem;
+    display: flex;
+    background: #fff;
+    border-top: #e7e7e7 solid 2px;
+    border-bottom: #e7e7e7 solid 2px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer_nav figure span {
+    font-size: 0.37rem;
+}
+
+#footer_nav figure {
+    font-size: 0.17rem;
+    text-align: center;
+}
+
+#footer_nav figure .iconfont {
+    font-size: 0.38rem;
+    color: #999;
+}
+
+#footer_logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.28rem;
+    right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 2px #f4f4f4;
+    background: #fff;
+}
+
+#footer_logo span {
+    font-size: 0.32rem;
+    text-align: center;
+    color: #999;
+}
+
+#footer_logo span:nth-child(3) {
+    font-size: 0.17rem;
+}

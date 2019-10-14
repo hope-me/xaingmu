@@ -1,0 +1,173 @@
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 用户头像 */
+
+#section_nav {
+    height: 2.3rem;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.3rem;
+    margin: 0 auto;
+    width: 6.91rem;
+}
+
+#section_nav figure {
+    width: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#section_nav figure img {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+#section_nav figure figcaption {
+    font-size: 0.21rem;
+    color: #999;
+    margin-top: 0.25rem;
+}
+
+#trends {
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    background: #FFf;
+    border-bottom: #ccc solid 1px;
+    padding-bottom: 0.3rem;
+    margin: 0 auto;
+    width: 6.91rem;
+}
+
+#trends_nav {
+    height: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+#trends_nav img {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+}
+
+#trends_nav_top div {
+    margin-left: 0.31rem;
+    display: flex;
+    height: 0.8rem;
+    flex-direction: column;
+}
+
+#trends_nav div h3 {
+    font-size: 0.26rem;
+}
+
+#trends_nav div p {
+    height: 0.4rem;
+    display: flex;
+    align-items: center
+}
+
+#trends_nav div p a {
+    font-size: 0.21rem;
+    color: #999;
+}
+
+#trends_nav div p span {
+    font-size: 0.21rem;
+    color: #999;
+    margin-left: 0.31rem;
+}
+
+#trends_nav_top {
+    display: flex;
+}
+
+#trends_a {
+    height: 0.44rem;
+    width: 1.08rem;
+    font-size: 0.22rem;
+    border: solid 2px #ed3933;
+    text-align: center;
+    line-height: 0.44rem;
+    color: #ed3933;
+    border-radius: 0.08rem;
+    text-decoration: none;
+}
+
+#trends h2 {
+    font-size: 0.26rem;
+    margin-top: 0.24rem;
+    height: 0.52rem;
+    line-height: 0.52rem;
+}
+
+#nameimg {
+    margin-top: 0.14rem;
+}
+
+#nameimg img {
+    height: 2.1rem;
+    width: 2.1rem;
+    border-radius: 0.08rem;
+}
+
+#trends_bottom p {
+    display: flex;
+    height: 0.28rem;
+    margin-top: 0.2rem;
+}
+
+#trends_bottom p .iconfont {
+    font-size: 0.28rem;
+    color: #999;
+}
+
+#trends_bottom p span {
+    font-size: 0.15rem;
+    color: #999;
+    margin-left: 0.16rem;
+}
+
+#zan {
+    height: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.3rem;
+}
+
+#zan img {
+    height: 0.6rem;
+    width: 1.4rem;
+}
+
+#zan p {
+    display: flex;
+    height: 0.6rem;
+    align-items: center;
+}
+
+#zan p a {
+    margin-left: 0.2rem;
+}
+
+#zan p span {
+    color: #1c1c1c;
+}
+
+#zan p .iconfont {
+    font-size: 0.3rem;
+}
+
+.zan-span {
+    font-size: 0.34rem;
+}

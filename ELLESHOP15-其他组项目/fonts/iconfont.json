@@ -1,0 +1,114 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "180940",
+      "name": "读头条",
+      "font_class": "dutoutiao",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "1037704",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "1400863",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "1638197",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "2127141",
+      "name": "设置",
+      "font_class": "set",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "3764364",
+      "name": "我的",
+      "font_class": "weibiaoti-",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "5392406",
+      "name": "评价",
+      "font_class": "pingjia",
+      "unicode": "e714",
+      "unicode_decimal": 59156
+    },
+    {
+      "icon_id": "5849199",
+      "name": "优惠券",
+      "font_class": "youhuiquan",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "6524667",
+      "name": "待收货",
+      "font_class": "daishouhuo",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "6569566",
+      "name": "浏览",
+      "font_class": "liulan",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
+    },
+    {
+      "icon_id": "6602714",
+      "name": "付款",
+      "font_class": "fukuan",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "7286861",
+      "name": "带发货",
+      "font_class": "daifahuo",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "7863862",
+      "name": "shinshop 礼品卡",
+      "font_class": "shinshoplipinqia",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "9666187",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "9810490",
+      "name": "极速退款",
+      "font_class": "jisutuikuan",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+/* ------------头部开始-------------- */
+
+header {
+    width: 100%;
+    height: 0.94rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 0.37rem;
+    color: #101010;
+    font-weight: 600;
+}
+
+
+/* ------------头部结束-------------- */
+
+
+/* ------------section开始-------------- */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex: 1;
+    background: #f9f9f9;
+    overflow: auto;
+    font-size: 0.2rem;
+}
+
+section h2 {
+    font-size: 0.3rem;
+    color: #101010;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.2rem;
+    margin-top: 0.2rem;
+}
+
+section figure {
+    width: 6.9rem;
+    height: 3.2rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+    border-radius: 0.1rem;
+    flex-shrink: 0;
+}
+
+section figure:nth-child(1) {
+    margin-top: 1rem;
+}
+
+section figure>span:nth-of-type(1) {
+    font-size: 0.44rem;
+    margin-left: 0.1rem;
+}
+
+section figure input[type="checkbox"] {
+    border: 0;
+    margin-left: 0.15rem;
+}
+
+section figure img {
+    width: 1.9rem;
+    height: 1.9rem;
+    margin: 0 0.2rem;
+}
+
+section figure figcaption {
+    width: 3.8rem;
+    height: 2rem;
+    /* background: #f00; */
+}
+
+section figure figcaption h3 {
+    font-size: 0.18rem;
+    color: #101010;
+}
+
+section figure figcaption span,
+section figure figcaption p {
+    color: #999999;
+    font-size: 0.22rem;
+}
+
+section figure figcaption .number {
+    display: flex;
+    justify-content: center;
+}
+
+section figure figcaption h4 {
+    width: 3.8rem;
+    height: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.4rem;
+}
+
+section figure figcaption i {
+    font-style: normal;
+    color: #f00;
+}
+
+section figure figcaption input[type="text"] {
+    width: 0.5rem;
+    text-align: center;
+    border: 0;
+}
+
+section figure figcaption button {
+    border: 0;
+    background: #eee;
+}
+
+
+/* 商品列表结束 */
+
+
+/* 合计开始 */
+
+.heji {
+    width: 7.5rem;
+    height: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #f00; */
+    font-size: 0.2rem;
+}
+
+.heji figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0.3rem;
+}
+
+.heji h2 {
+    width: 3rem;
+    height: 1.6rem;
+    /* background: #00f; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1.6rem;
+}
+
+.heji h2 p {
+    display: flex;
+    justify-content: space-around;
+}
+
+.heji h2 p i {
+    font-style: normal;
+}
+
+.heji h2 em {
+    font-size: 0.2rem;
+    color: #999999;
+    margin-left: 0.7rem;
+    font-style: normal;
+}
+
+.heji .jiesuan {
+    width: 1.7rem;
+    height: 0.9rem;
+    background: #101010;
+    color: #fff;
+    border: 0;
+    border-radius: 0.1rem;
+    outline: none;
+    margin-right: 0.2rem;
+}
+
+
+/* ------------section结束-------------- */
+
+
+/* ------------底部开始-------------- */
+
+
+/* ------------底部开始-------------- */
+
+
+/* -----------底部开始--------------- */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    height: 0.94rem;
+    margin-bottom: 0.25rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    flex-shrink: 0;
+    position: relative;
+    background: #fff;
+}
+
+footer figure {
+    font-size: 0.18rem;
+    /* line-height: 0.94rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #999999;
+}
+
+footer figure .iconfont {
+    font-size: 0.39rem;
+    text-align: center;
+    color: #999999;
+}
+
+footer figure:nth-child(5) {
+    font-weight: 600;
+    color: #101010;
+}
+
+footer img {
+    width: 1.52rem;
+    height: 1.52rem;
+    position: absolute;
+    left: 2.9rem;
+    bottom: -0.25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #eee;
+}

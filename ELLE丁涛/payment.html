@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        ul,
+        ol,
+        li,
+        dl,
+        dt,
+        dd,
+        form,
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        b {
+            font-weight: normal;
+        }
+
+        html {
+            font-size: 13.333vw;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            height: .86rem;
+            display: flex;
+        }
+
+        header .icon-fanhui {
+            font-size: .38rem;
+            margin-left: .3rem;
+            align-self: center;
+            font-weight: 600;
+        }
+
+        header h2 {
+            font-size: .34rem;
+            align-self: center;
+            margin-left: 2.88rem;
+            font-weight: 600;
+        }
+
+        section {
+            flex: 1;
+            background: #f9f9f9;
+            overflow: auto;
+        }
+
+        footer {
+            height: 2.32rem;
+        }
+
+        .pay-area {
+            width: 6.9rem;
+            height: 1.8rem;
+            margin: .3rem auto 0;
+        }
+
+        .pay-major,
+        .pay-minor {
+            height: 0.34rem;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: .12rem;
+        }
+
+        .pay-major div,
+        .pay-minor div {
+            display: flex;
+            align-items: center;
+        }
+
+        .xiaoji,
+        .youfei,
+        .tax {
+            font-size: .2rem;
+            color: #999999;
+        }
+
+        .subtotal,
+        .postage {
+            font-size: .16rem;
+            color: #999999;
+        }
+
+        .heji {
+            font-size: .28rem;
+            color: #101010;
+        }
+
+        .total {
+            font-size: .22rem;
+            color: #ed3933;
+        }
+
+        .pay-btn {
+            color: #ffffff;
+            background: #eeeeee;
+            height: 0.74rem;
+            font-size: .26rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: .07rem;
+            margin-top: .2rem;
+        }
+
+        .location {
+            height: 1.64rem;
+            width: 6.3rem;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .location img {
+            width: 0.24em;
+            height: 0.36rem;
+        }
+
+        .user-more {
+            font-size: 0.5rem;
+        }
+
+        .username {
+            font-size: .26rem;
+            color: #101010;
+            margin-right: .9rem;
+        }
+
+        .userphone {
+            font-size: .22rem;
+            color: #101010;
+        }
+
+        .user-location {
+            font-size: .24rem;
+            color: #999999;
+        }
+
+        .location-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 5rem;
+        }
+
+        .user {
+            display: flex;
+            margin-bottom: .12rem;
+        }
+
+        .list {
+            width: 6.9rem;
+            height: 6.96rem;
+            background: #ffffff;
+            border-radius: .07rem;
+            margin: 0 auto;
+        }
+
+        .goods {
+            width: 6.3rem;
+            margin: 0 auto;
+            display: flex;
+            border-bottom: 2px solid #eeeeee;
+        }
+
+        .img {
+            width: 1.94rem;
+            height: 1.94rem;
+            background: #cccccc;
+            margin: .4rem .3rem .4rem .1rem;
+        }
+
+        .box {
+            width: 4.06rem;
+            height: 1.84em;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: .4rem 0;
+        }
+
+        .box div:first-of-type {
+            display: flex;
+            margin-bottom: .12rem;
+        }
+
+        .box div:last-of-type {
+            display: flex;
+            margin-bottom: .42rem;
+        }
+
+        .g-name {
+            font-size: .22rem;
+            color: #141414;
+            margin-bottom: .12rem;
+        }
+
+        .g-yanse,
+        .g-color,
+        .g-chima,
+        .g-size {
+            font-size: .22rem;
+            color: #999999;
+        }
+
+        .g-price {
+            font-size: .22rem;
+            color: #ed3933;
+
+        }
+
+        .coupon,
+        .custom {
+            width: 6.3rem;
+            border-bottom: 2px solid #eeeeee;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .payment {
+            width: 6.3rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .coupon h3,
+        .custom h3,
+        .payment h3 {
+            font-size: .28rem;
+            color: #101010;
+            margin: .24rem 0 .2rem;
+        }
+
+        .coupon p,
+        .custom p,
+        .payment p {
+            font-size: .22rem;
+            color: #999999;
+            margin: 0 0 .2rem;
+        }
+
+        .coupon span,
+        .custom span,
+        .payment span {
+            font-size: .5rem;
+            color: #101010;
+            align-self: center;
+        }
+
+        .TCP {
+            width: 6.3rem;
+            margin: 0 auto;
+        }
+
+        .TCP h3 {
+            font-size: .22rem;
+            color: #a0a0a0;
+            margin: .28rem 0 .12rem;
+        }
+
+        .TCP p {
+            font-size: .22rem;
+            color: #a0a0a0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <span class="iconfont icon-fanhui"></span>
+        <h2>结算</h2>
+    </header>
+    <section>
+        <div class="location">
+            <img src="img/location.jpg" />
+            <div class="location-main">
+                <div class="user">
+                    <span class="username">罗小黑</span>
+                    <span class="userphone">18438610310</span>
+                </div>
+                <p class="user-location">蓝溪镇</p>
+            </div>
+            <span class="user-more">></span>
+        </div>
+        <ul class="list">
+            <li class="goods">
+                <div class="img">
+
+                </div>
+                <div class="box">
+                    <h3 class="g-name">尾巴</h3>
+                    <div>
+                        <span class="g-yanse">颜色：</span>
+                        <span class="g-color">黑色</span>
+                    </div>
+                    <div>
+                        <span class="g-chima">尺码：</span>
+                        <span class="g-size">M</span>
+                    </div>
+                    <span class="g-price">￥199</span>
+                </div>
+            </li>
+            <li class="coupon">
+                <div>
+                    <h3>优惠券</h3>
+                    <p>输入或选择优惠券</p>
+                </div>
+                <span>></span>
+            </li>
+            <li class="custom">
+                <div>
+                    <h3>清关信息（必填）</h3>
+                    <p>请上传付款人的身份证信息用于清关</p>
+                </div>
+                <span>></span>
+            </li>
+            <li class="payment">
+                <div>
+                    <h3>支付方式</h3>
+                    <p>请选择支付方式</p>
+                </div>
+                <span>></span>
+            </li>
+        </ul>
+        <div class="TCP">
+            <h3>购买前请确认</h3>
+            <p>
+                1、配送范围根据您在"ELLESHOP"下订单时选择配送方式的快递配送范围，用户下单前请查询相关配送范围，确保所提交的送货地址属于该范围之内，超出该范围的订购或配送要求，属于无效订单，"ELLESHOP"有权单方取消订单。<br />
+                2、在提交订单前，用户应再次确认配送地址，如果因为用户地址错误造成延期配送或不能配送的，用户自行承担责任，造成货物重复配送，公司有权按照实际配送次数收取物流费用。<br />
+                3、收货人可以为用户本人也可以为本人以外的其他人。公司将按照通过审核后的订单上所述的配送地址、收货人姓名和电话进行配送。如果收货人在配送过程中要求变更接收地址的，公司视同已经过用户本人的同意。<br />
+                4、原则上收货人应当亲自接收，如遇特殊情况收货人可以与"ELLESHOP"客服中心联系申请由他人代为签收。如果配送地点属于办公区域，则前台人员代为签收视为已经经过用户的同意。大额订单进行配送签收时，公司有权要求收货人出示有效身份证明。<br />
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="pay-area">
+            <div class="pay-major">
+                <div>
+                    <span class="xiaoji">小计：</span>
+                    <span class="subtotal">￥999</span>
+                </div>
+                <div>
+                    <span class="heji">合计：</span>
+                    <span class="total">￥1099</span>
+                </div>
+            </div>
+            <div class="pay-minor">
+                <div>
+                    <span class="youfei">邮费：</span>
+                    <span class="postage">￥100</span>
+                </div>
+                <div>
+                    <span class="tax">含税费</span>
+                </div>
+            </div>
+            <div class="pay-btn">确认下单</div>
+        </div>
+    </footer>
+</body>
+
+</html>

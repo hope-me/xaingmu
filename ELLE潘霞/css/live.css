@@ -1,0 +1,53 @@
+.live_article {
+    width: 6.91rem;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.live_aside {
+    width: 6.91rem;
+    height: 6.44rem;
+    margin: 0.2rem 0
+}
+
+.live_img {
+    width: 6.91rem;
+    height: 6.44rem;
+    position: relative;
+}
+
+.live_img img {
+    width: 6.91rem;
+    height: 6.44rem;
+}
+
+.live_img div {
+    width: 6.63rem;
+    height: 0.99rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(112, 173, 160, 0.4);
+    color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.48rem 0 0.53rem 0.28rem;
+}
+
+.live_img div h2 {
+    font-size: 0.22rem;
+    text-decoration: underline;
+}
+
+.live_img div p {
+    font-size: 0.28rem;
+}
+
+.live_img div span {
+    font-size: 0.16rem
+}
+
+.live_img .bk_red {
+    background: rgba(232, 94, 106, 0.4)
+}

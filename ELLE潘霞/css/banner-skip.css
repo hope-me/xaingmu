@@ -1,0 +1,166 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+header {
+    height: 1.17rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #101010;
+    font-size: 0.27rem;
+    font-weight: 600;
+}
+
+header a {
+    margin: 0 0.1rem;
+    color: #101010
+}
+
+header .iconfont {
+    font-size: 0.38rem;
+    font-weight: 600;
+}
+
+section {
+    flex: 1;
+    overflow: auto;
+}
+
+.banner {
+    height: 2.9rem;
+    position: relative
+}
+
+.banner p:first-child {
+    width: 100%;
+    height: 2.9rem;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%
+}
+
+.banner aside {
+    position: absolute;
+    width: 100%;
+    height: 1.82rem;
+    top: 0.35rem;
+    left: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.banner .h {
+    font-size: 0.22rem;
+    line-height: 0.82rem
+}
+
+.banner p {
+    font-size: 0.2rem;
+    line-height: 0.72rem
+}
+
+.banner p .iconfont {
+    font-size: 0.32rem
+}
+
+.fenxiang {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0.24rem;
+    right: 0.5rem;
+}
+
+.fenxiang .iconfont {
+    font-size: 0.36rem
+}
+
+.shangpin {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.shangpin img {
+    width: 3.3rem;
+    height: 4.3rem;
+}
+
+.shangpin figure {
+    width: 3.29rem;
+    height: 5.61rem;
+    font-size: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+figcaption h6 {
+    color: #101010;
+    font-size: 0.23rem;
+    line-height: 0.42rem
+}
+
+figcaption .minz {
+    font-size: 0.23rem;
+    color: #999999;
+    line-height: 0.42rem
+}
+
+figcaption aside {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.26rem;
+    color: #101010;
+}
+
+figcaption .iconfont {
+    font-size: 0.32rem;
+}

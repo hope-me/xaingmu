@@ -1,0 +1,271 @@
+    * {
+        margin: 0;
+        padding: 0
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    html {
+        font-size: 13.3333vw;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    body {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* header */
+
+    header {
+        position: fixed;
+        z-index: 100;
+        background: #fff;
+        width: 100%;
+    }
+
+    header li a {
+        color: #999;
+        text-decoration: none
+    }
+.big{font-size: .3rem;}
+    header li {
+        font-size: .24rem;
+        color: #999;
+        float: left;
+        line-height: 1.4rem;
+        margin-left: .3rem;
+        font-weight: 500;
+    }
+
+    #header-font {
+        color: #101010;
+        font-size: .42rem;
+        position: absolute;
+        top: .44rem;
+        right: .3rem;
+    }
+
+    /* header end */
+
+    /* section */
+
+    section {
+        flex-grow: 1;
+        margin-top: 1.5rem;
+        margin-bottom: 1.15rem
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        margin: 0 .3rem
+    }
+
+    section .lingqu {
+        height: 1.2rem;
+        width: 6.9rem;
+        background: #f9f9f9;
+        border-radius: 5px;
+        margin-left: .3rem;
+        margin-top: .2rem;
+        color: #101010;
+        padding-top: .2rem;
+        display: flex
+    }
+
+    section .lingqu span {
+        font-size: .3rem;
+        font-weight: 700;
+        margin: .3rem
+    }
+
+    section .lingqu figcaption {
+        font-size: .2rem;
+        margin: .1rem 0 0 .3rem
+    }
+
+    section .lingqu button {
+        border: 0;
+        color: #fff;
+        background: #ed3933;
+        font-size: .24rem;
+        width: 1rem;
+        height: .54rem;
+        border-radius: 10px;
+        margin-left: 1.7rem;
+        margin-top: .18rem
+    }
+
+    section .maishou {
+        width: 6.9rem;
+        height: 3.6rem;
+        margin: .2rem 0 0 .3rem;
+        display: flex
+    }
+
+    section .maishou .shoubiao {
+        width: 3.35rem;
+        height: 3.6rem;
+        background: #f9f9f9;
+        margin-right: .2rem
+    }
+
+    section .maishou .shoubiao img {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: .37rem 0 0 .3rem
+    }
+
+    section .maishou .box01 {
+        width: 3.4rem;
+    }
+
+    .zhekou {
+        width: 3.38rem;
+        height: 1.7rem;
+        background: #f9f9f9;
+        margin-bottom: .2rem;
+    }
+
+    .doumai {
+        width: 3.38rem;
+        height: 1.7rem;
+        background: #f9f9f9;
+    }
+
+    .zhekou {
+        display: flex
+    }
+
+    .box01 .zhekou h4 {
+        font-size: .28rem;
+    }
+
+    .box01 .zhekou img {
+        width: 1.2rem;
+        height: 1.1rem;
+        margin: .3rem 0 0 .3rem
+    }
+
+    .zhekou figure {
+        margin-left: .3rem;
+        margin-top: .35rem
+    }
+
+    .zhekou figure h4 {
+        color: #101010
+    }
+
+    .zhekou figcaption {
+        font-size: .22rem;
+        color: #999
+    }
+
+    .doumai img {
+        width: .8rem;
+        height: 1.2rem;
+        margin: .22rem .3rem 0 .35rem
+    }
+
+    .doumai {
+        display: flex
+    }
+
+    .doumai h4 {
+        color: #101010;
+        font-size: .28rem;
+    }
+
+    .doumai span {
+        font-size: .22rem;
+        color: #999
+    }
+
+    .shishang img {
+        width: 6.9rem;
+        height: 1.7rem;
+        margin: .2rem 0 0 .3rem;
+        border-radius: 10px
+    }
+
+    .jingxuan {
+        height: 1.05rem;
+        line-height: 1.05rem;
+        width: 100%;
+        font-size: .28rem;
+        color: #171717;
+        padding-left: 2.4rem;
+    }
+
+    .jingxuan span {
+        margin: 0 .2rem
+    }
+
+    .jingxuan img {
+        width: .56rem;
+        height: 4px;
+    }
+
+    /* section end*/
+
+    /* ------------底部开始-------------- */
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        height: .94rem;
+        margin-bottom: .2rem;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        flex-shrink: 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #fff
+    }
+
+    footer figure {
+        font-size: .18rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #999;
+    }
+
+    footer div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer figure:nth-child(2) {
+        font-weight: 600;
+        color: #101010
+    }
+
+    footer figure .iconfont {
+        font-size: 0.39rem;
+        /* text-align: center; */
+        color: #999
+    }
+
+    footer img {
+        width: 1.52rem;
+        height: 1.52rem;
+        position: absolute;
+        left: 2.9rem;
+        bottom: -.25rem;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #eee
+    }
+
+    /* footer end */

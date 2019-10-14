@@ -1,0 +1,451 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 7.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .icon-jiantou {
+    font-weight: 900;
+    font-size: 0.38rem;
+}
+
+.swiper-container {
+    height: 5.5rem;
+    width: 100%;
+    display: flex;
+}
+
+section {
+    display: flex;
+    width: 7.5rem;
+    flex: 1;
+    flex-direction: column;
+    overflow: auto;
+}
+
+header .lun {
+    /* display: flex; */
+    height: 0.3rem;
+}
+
+
+/* 收藏  视频   分享 */
+
+#main {
+    height: 3.6rem;
+    width: 6.9rem;
+    padding: 0 0.3rem;
+    border-bottom: solid #f9f9f9 0.1rem;
+}
+
+#main h2 {
+    font-size: 0.4rem;
+    margin-top: 0.41rem;
+}
+
+#main h3 {
+    font-size: 0.28rem;
+    color: #101010;
+    margin-top: 0.31rem;
+}
+
+#main p {
+    margin-top: 0.26rem;
+    font-size: 0.22rem;
+}
+
+#main div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main div figure {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+#main div figure .iconfont {
+    font-size: 0.36rem;
+}
+
+#main div figcaption {
+    font-size: 0.22rem;
+}
+
+#marin {
+    height: 1.8rem;
+    width: 6.9rem;
+    padding: 0 0.3rem;
+    display: flex;
+    border-bottom: solid #f9f9f9 0.1rem;
+}
+
+#marin img {
+    height: 1.6rem;
+    width: 3rem;
+    margin-top: 0.1rem;
+}
+
+#marin h2 {
+    font-size: 0.25rem;
+    margin: 0.4rem 0 0 0.4rem;
+}
+
+#size {
+    height: 1.7rem;
+    width: 6.9rem;
+    padding: 0 0.3rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid #f9f9f9 0.1rem;
+}
+
+#size a {
+    font-size: 0.22rem;
+    color: #000;
+    text-decoration: none;
+    margin-top: 0.4rem;
+}
+
+
+/* 产品介绍 */
+
+#intro {
+    height: 8.72rem;
+    width: 6.9rem;
+    padding: 0 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid #f9f9f9 0.1rem;
+}
+
+#intro_img1 {
+    height: 3rem;
+    width: 6.7rem;
+    margin-top: 0.4rem;
+}
+
+#intro_img2 {
+    margin-top: 0.48rem;
+}
+
+#intro div {
+    height: 3.9rem;
+    width: 6.9rem;
+}
+
+#intro div h3 {
+    font-size: 0.26rem;
+    margin-top: 0.49rem;
+}
+
+#intro div p {
+    margin-top: 0.55rem;
+    color: #9d9d9d;
+    font-size: 0.17rem;
+}
+
+
+/* 猜你喜欢 */
+
+#youlike {
+    height: 5.9rem;
+    width: 6.9rem;
+    padding: 0 0.3rem;
+}
+
+#youlike div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.48rem;
+}
+
+#youlike div:nth-child(1) h3 {
+    font-size: 0.28rem;
+}
+
+#youlike div:nth-child(1) span {
+    font-size: 0.23rem;
+    color: #999999;
+}
+
+#youlike div:nth-child(2) {
+    margin-top: 0.26rem;
+}
+
+
+/* 尾部 */
+
+footer {
+    height: 2.1rem;
+}
+
+#footer {
+    height: 2.1rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer a {
+    height: 0.88rem;
+    width: 3.22rem;
+    font-size: 0.3rem;
+    display: block;
+    border: solid #999 0.02rem;
+    border-radius: 0.1rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 0.88rem;
+    color: #000;
+}
+
+#footer a:nth-child(2) {
+    background: #101010;
+    color: #fff;
+}
+
+
+/* 分享 */
+
+#share {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+    background: #cecece;
+    /* position: relative; */
+    opacity: 0.5;
+}
+
+#share_div {
+    position: fixed;
+    bottom: 0;
+    height: 3.15rem;
+    width: 100%;
+    background: #fff;
+    display: none;
+}
+
+#share_div div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.25rem;
+}
+
+#share_div div figcaption {
+    font-size: 0.21rem;
+    color: #999;
+}
+
+#share_div div figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#share_div p {
+    height: 0.86rem;
+    font-size: 0.22rem;
+    text-align: center;
+    line-height: 0.86rem;
+    border-top: solid 2px #f9f9f9;
+}
+
+
+/* 购买弹窗 */
+
+.gouwu {
+    padding: 0.35rem 0.28rem 0;
+    height: 7.34rem;
+    background: #fff;
+    border-radius: 0.2rem 0.2rem 0 0
+}
+
+.gouwu .yifu {
+    width: 6.94rem;
+    height: 2.54rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #eeeeee 0.04rem solid
+}
+
+.gouwu .yifu p:first-child {
+    width: 2.42rem;
+    height: 2.42rem;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.gouwu .yifu p:first-child img {
+    width: 1.94rem;
+    height: 1.95rem;
+}
+
+.gouwu .yifu p:nth-child(2) {
+    width: 2.2rem;
+    height: 2.18rem;
+    margin-left: 0.3rem;
+    line-height: 0.5rem;
+    font-size: 0.31rem;
+    display: flex;
+    flex-direction: column;
+    color: #101010;
+    font-weight: 600
+}
+
+.gouwu .yifu p:nth-child(2) span:nth-child(3) {
+    font-size: 0.23rem;
+    color: #ed3933
+}
+
+.gouwu .yifu p:nth-child(2) span:nth-child(4) {
+    font-size: 0.23rem;
+    color: #e8b32a;
+    font-weight: 500
+}
+
+.gouwu .yifu p:nth-child(3) {
+    width: 2.09rem;
+    height: 2.18rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 0.4rem
+}
+
+.gouwu .yifu p:nth-child(3) span {
+    display: block;
+    margin: 0.05rem
+}
+
+.gouwu .yifu p:nth-child(3) .iconfont {
+    font-size: 0.24rem;
+    color: #121212
+}
+
+.gouwu aside {
+    padding: 0.16rem 0;
+    height: 0.6rem;
+    border-bottom: #eeeeee 0.04rem solid;
+    display: flex
+}
+
+.gouwu aside div:first-of-type {
+    border-right: #eeeeee 0.04rem solid;
+}
+
+.gouwu aside div {
+    width: 3.45rem;
+    height: 100%;
+    font-size: 0.24rem;
+    color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.gouwu aside div p {
+    width: 1.3rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+.jishu {
+    border-bottom: #eeeeee 0.04rem solid;
+    width: 100%;
+    height: 0.9rem;
+    color: #101010;
+    font-size: 0.22rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.jishu button {
+    width: 0.36rem;
+    height: 0.36rem;
+    border: 0;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.3rem
+}
+
+.jishu p {
+    width: 0.83rem;
+    height: 0.40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.anniu {
+    height: 2.09rem;
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+.anniu button {
+    width: 3.22rem;
+    height: 0.9rem;
+    border: 0;
+    background: #ffffff;
+    border-radius: 0.1rem;
+    font-size: 0.3rem;
+    font-weight: 500
+}
+
+.anniu button:last-child {
+    background: #101010;
+    color: #ffffff
+}

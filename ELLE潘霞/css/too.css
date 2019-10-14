@@ -1,0 +1,81 @@
+/* 重置样式 */
+
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+header,
+fieldset,
+legend,
+img,
+figure,
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+i,
+em {
+    font-weight: normal;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+a,
+u {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+.top_list a {
+    font-weight: bold;
+}
+
+
+/* 重置样式结束 */
+
+.section_big {
+    overflow: auto;
+    /* border-radius:  */
+}
+
+.x_car {
+    width: 41.64rem;
+    height: 3.81rem;
+    position: relative;
+    overflow: hidden
+}
+
+.car_img {
+    width: 41.63rem;
+    height: 3.81rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.car_img li {
+    float: left;
+    margin-right: 0.3rem
+}

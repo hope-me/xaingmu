@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/share.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/js.cookie.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <button></button>
+    </header>
+    <div class="title_container">
+        <img src="./img/title_img.jpg" alt="">
+        <h2>欢迎登陆ELLESHOP账户</h2>
+    </div>
+    <!-- 登陆表单 -->
+
+    <form class="login_form">
+        <div>
+            <p>+86</p>
+            <input type="text" placeholder="手机号码">
+        </div>
+        <input class="user_pass" type="password" placeholder="密码">
+        <span class="tip_phone">请输入正确的手机号码</span>
+        <input class="login_btn" type="button" value="登录" />
+        <p class="phone_login">手机快速登录</p>
+    </form>
+
+    <p class="three_icon">
+        <img src="./img/weixin_icon.jpg" alt="">
+        <img src="./img/qq_icon.jpg" alt="">
+        <img src="./img/weibo_icon.jpg" alt="">
+    </p>
+    <div class="margin_207"></div>
+    <script>
+        let regphone = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/
+        $('.login_form div input').change(function () {
+            if (!regphone.test($('.login_form div input').val())) {
+                $('.login_form div input').css('border', '0.01rem solid #f00')
+                $('.tip_phone').css('display', 'block')
+            } else {
+                $('.login_form div input').css('border', 0)
+                $('.tip_phone').css('display', 'none')
+            }
+        })
+        $('.login_btn').click(function () {
+            if (regphone.test($('.login_form div input').val())) {
+                // 条件满足后发起请求
+                let logurl = 'http://106.13.115.175:8080/elleshop/user/login.do'
+                let logdata = {
+                    phone: $('.login_form div input').val(),
+                    password: $('.user_pass').val()
+                }
+                $.post(logurl, logdata, (res) => {
+                    console.log(res);
+                    console.log(res.info);
+                    localStorage.setItem('token', res.info);
+                    location.href = "jingpin.html";
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

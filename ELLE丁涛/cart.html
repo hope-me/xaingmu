@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        ul,
+        ol,
+        li,
+        dl,
+        dt,
+        dd,
+        form,
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        b {
+            font-weight: normal;
+        }
+
+        html {
+            font-size: 13.333vw;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            height: .86rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        header h2 {
+            font-size: .34rem;
+            color: #101010;
+            align-self: center;
+        }
+
+        section {
+            flex: 1;
+            background: #eeeeee;
+            position: relative;
+        }
+
+        footer {
+            height: .96rem;
+            border-top: rgba(200, 200, 200, 0.5) solid 2px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+        }
+
+        footer figure {
+            text-align: center;
+        }
+
+        footer figcaption {
+            font-size: .17rem;
+            line-height: .34rem;
+            color: #cfcfcf;
+        }
+
+        footer figure:nth-of-type(3) {
+            width: 1.48rem;
+            height: 1.48rem;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            background: #fff;
+        }
+
+        footer figure:nth-of-type(3) img {
+            width: .76rem;
+            margin: .26rem auto 0;
+
+        }
+
+        footer figure:hover {
+            color: #101010;
+        }
+
+        footer figure:hover figcaption {
+            color: #101010;
+        }
+
+        footer .iconfont {
+            font-size: .4rem;
+            line-height: .42rem;
+            color: #cfcfcf;
+        }
+
+        section>h3 {
+            width: 6.3rem;
+            display: flex;
+            justify-content: flex-end;
+            margin: .27rem auto;
+        }
+
+        section span {
+            font-size: .28rem;
+            color: #101010;
+        }
+
+        .goods {
+            width: 6.3rem;
+            height: 3.18rem;
+            padding: 0 .3rem;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: .07rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .tui-checkbox:checked {
+            background: #101010;
+        }
+
+        .tui-checkbox {
+            width: .38rem;
+            height: .38rem;
+            background-color: #ffffff;
+            border: solid 0.02rem #dddddd;
+            border-radius: 50%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            cursor: default;
+            -webkit-appearance: none;
+            -webkit-user-select: none;
+            user-select: none;
+            transition: background-color ease 0.1s;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .tui-checkbox:checked::after {
+            outline: none;
+            content: '';
+            top: 26%;
+            left: 24%;
+            position: absolute;
+            background: transparent;
+            border: #fff solid 0.04rem;
+            border-top: none;
+            border-right: none;
+            height: 0.06rem;
+            width: 0.12rem;
+            transform: rotate(-45deg);
+        }
+
+        .goods-img {
+            width: 1.94rem;
+            height: 1.94rem;
+            background: #eeeeee;
+        }
+
+        .goods-main {
+            width: 3.2rem;
+            height: 1.84rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .goods-main div:first-of-type {
+            display: flex;
+            margin-bottom: .12rem;
+        }
+
+        .goods-main div:nth-of-type(2) {
+            display: flex;
+            margin-bottom: .20rem;
+        }
+
+        .goods-main div:last-of-type {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .g-name {
+            font-size: .22rem;
+            color: #141414;
+            margin: 0 0 .16rem;
+        }
+
+        .g-yanse,
+        .g-color,
+        .g-chima,
+        .g-size {
+            font-size: .22rem;
+            color: #999999;
+        }
+
+        .g-price {
+            font-size: .22rem;
+            color: #ed3933;
+        }
+
+        .g-form {
+            width: 1.08rem;
+            height: 0.36rem;
+            border: 1px solid #eeeeee;
+            display: flex;
+        }
+
+        .subBtn,
+        .addBtn {
+            width: 0.36rem;
+            height: 0.36rem;
+            background: #f9f9f9;
+            color: #101010;
+            border: none;
+            font-size: .16rem;
+            outline: none;
+        }
+
+        .numIpt {
+            width: 0.36rem;
+            height: 0.32rem;
+            border: none;
+            font-size: .16rem;
+            text-align: center;
+            outline: none;
+        }
+
+        .payment {
+            background: #ffffff;
+            height: 1.34rem;
+            width: 7.5rem;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .pay-all {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: .6rem;
+        }
+
+        .pay-all span {
+            font-size: .16rem;
+            margin-top: .04rem;
+            font-weight: 600;
+        }
+
+        .pay-main {
+            width: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 0 .3rem 0 1.3rem;
+        }
+
+        .pay-main div {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .pay-go {
+            width: 1.58rem;
+            height: 0.74rem;
+            background: #eeeeee;
+            color: #ffffff;
+            border-radius: 0.07rem;
+            font-size: .28rem;
+            line-height: .74rem;
+            text-align: center;
+            margin-right: .3rem;
+        }
+
+        .heji {
+            font-size: .28rem;
+            color: #101010;
+        }
+
+        .total {
+            font-size: .28rem;
+            color: #ed3933;
+        }
+
+        .tax {
+            font-size: .22rem;
+            color: #999999;
+            margin-right: .2rem;
+        }
+
+        .fee {
+            font-size: .22rem;
+            color: #999999;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h2>购物车</h2>
+    </header>
+    <section>
+        <h3>
+            <span>编辑</span>
+        </h3>
+        <div class="goods">
+            <input name="checkbox" value="Item 1" type="checkbox" class="tui-checkbox one-btn">
+            <div class="goods-img"></div>
+            <div class="goods-main">
+                <h3 class="g-name">尾巴</h3>
+                <div>
+                    <span class="g-yanse">颜色：</span>
+                    <span class="g-color">黑色</span>
+                </div>
+                <div>
+                    <span class="g-chima">尺码：</span>
+                    <span class="g-size">M</span>
+                </div>
+                <div>
+                    <span class="g-price">￥199</span>
+                    <form class="g-form">
+                        <button class="subBtn">-</button>
+                        <input type="text" class="numIpt" value="1" />
+                        <button class="addBtn">+</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="payment">
+            <div class="pay-all">
+                <input name="checkbox" value="Item 1" type="checkbox" class="tui-checkbox all-btn">
+                <span>ALL</span>
+            </div>
+            <div class="pay-main">
+                <div>
+                    <span class="heji">合计：</span>
+                    <span class="total">￥199(1件)</span>
+                </div>
+                <div>
+                    <span class="tax">含关税</span>
+                    <span class="fee">不含运费</span>
+                </div>
+            </div>
+            <div class="pay-go">去结算</div>
+        </div>
+    </section>
+    <footer>
+        <figure class="iconfont icon-shouye iconfonts">
+            <figcaption>精选</figcaption>
+        </figure>
+        <figure class="iconfont icon-sousuo iconfonts">
+            <figcaption>分类</figcaption>
+        </figure>
+        <figure>
+            <figcaption class="logo">
+                <img src="img/logo-off.jpg" />
+            </figcaption>
+        </figure>
+        <figure class="iconfont icon-gouwuche iconfonts">
+            <figcaption>购物车</figcaption>
+        </figure>
+        <figure class="iconfont icon-wode iconfonts">
+            <figcaption>我的</figcaption>
+        </figure>
+    </footer>
+    <script>
+        $('.logo').hover(function () {
+            $(this).html(`<img src="img/logo-on.jpg" />`)
+        }, function () {
+            $(this).html(`<img src="img/logo-off.jpg" />`)
+        })
+        $('.iconfonts').hover(function () {
+            $('.logo').html(`<img src="img/logo-off.jpg" />`)
+        })
+        $('.icon-shouye').hover(function () {
+            window.location.href = "../ELLE潘霞/jx_all.html"
+        })
+        $('.icon-sousuo').hover(function () {
+            window.location.href = "../ELLE卢傲祥/6.html"
+        }) 
+        $('.icon-gouwuche').hover(function () {
+            window.location.href = "../ELLE丁涛/cart.html"
+        }) 
+        $('.icon-wode').hover(function () {
+            window.location.href = "../ELLE丁涛/wode.html"
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>视频</title>
+    <link rel="stylesheet" href="css/index03.css">
+    <link rel="stylesheet" href="css/swipper.css">
+    <link rel="stylesheet" href="./font_590akeqhsre/iconfont.css">
+    <script src="js/api.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="img/logo.png" alt="">
+            <img class="big" src="img/fangdajing.png" alt="">
+        </nav>
+        <ul>
+            <li><a href="#"> 综合</a></li>
+            <li><a href="#">明星</a> </li>
+            <li><a href="#">视频</a> </li>
+            <li><a href="#">买手好物</a> </li>
+            <li><a href="#">直播红包</a> </li>
+        </ul>
+
+
+    </header>
+    <section>
+        <div class="banner">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide"><img src="img/banner01.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/banner02.png" alt=""></div> -->
+                    <div class="swiper-slide"><img src="img/shipin.png" alt=""></div>
+                    <!-- <div class="swiper-slide"><img src="img/maishou.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/zhibo.png" alt=""></div> -->
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination" style="top: 1.76rem"></div> -->
+            </div>
+
+
+        </div>
+        <div class="content">
+            <!-- <dl>
+                自定义列表 
+                <dt><img src="img/content3.png" alt=""></dt>
+                <dd class="num1"><img style="width:0.68rem;height: 0.36rem;float: left;margin: 0.22rem 0.22rem 0 0" src="img/shipin2.png" alt=""> 独白|余男，性感以外
+                </dd>
+                <p style="font-size:0.23rem;color:#9D9D9D;line-height: 0.4rem;margin-bottom: 0.2rem">行事低调，角色张扬的余男今天做客ELLESHOP，看这位性感的女神如何打造时尚风范，展现意想不到的迷人风情。</p>
+            </dl>
+            <div class="tip">
+                <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></span>
+                <span class="num">3623</span>
+
+                <span class="iconfont icon-xinxi"></span>
+                <span class="num">3323</span>
+                <span class="iconfont icon-fenxiang"></span>
+            </div> -->
+            <!-- <div class="middle"><img src="img/content03.png" alt=""></div> -->
+
+        </div>
+
+
+    </section>
+    <!-- 底部开始 -->
+    <footer>
+        <img src="img/footer-pic1.png" alt="">
+        <figure>
+            <span class="iconfont icon-zhuye"></span>
+            <figcaption>首页</figcaption>
+        </figure>
+        <figure>
+            <span class="iconfont icon-sousuo"></span>
+            <figcaption>搜索</figcaption>
+        </figure>
+        <figure>
+            <span class="iconfont icon-sousuo"></span>
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <span class="iconfont icon-gouwuche"></span>
+            <figcaption>购物车</figcaption>
+        </figure>
+        <figure>
+            <span class="iconfont icon-weibiaoti-"></span>
+            <figcaption>我的</figcaption>
+        </figure>
+    </footer>
+    <!-- 底部结束 -->
+    <script>
+        console.log(fashionApi)
+        var data = {
+                type: 'sp'
+            }
+            // $.ajax({
+            //     url: fashionApi,
+            //     type: 'post',
+            //     data: data,
+            //     success: function(res) {
+            //         console.log(res)
+            //     }
+            // })
+        var url = fashionApi
+        $.post(url, data, function(res) {
+            console.log(res)
+            let obj = res.info
+            console.log(obj)
+            let ob = obj.map(v => `
+            <dl>
+                <dt><img src="${v.imgUrl}" alt=""></dt>
+                <dd class="num1"><img style="width:0.68rem;height: 0.36rem;float: left;margin: 0.22rem 0.22rem 0 0" src="img/shipin2.png" alt=""> ${v.title}
+                </dd>
+                <p style="font-size:0.23rem;color:#9D9D9D;line-height: 0.4rem;margin-bottom: 0.2rem">行事低调，角色张扬的余男今天做客ELLESHOP，看这位性感的女神如何打造时尚风范，展现意想不到的迷人风情。</p>
+            </dl>
+            <div class="tip">
+                <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></span>
+                <span class="num">3623</span>
+
+                <span class="iconfont icon-xinxi"></span>
+                <span class="num">3323</span>
+                <span class="iconfont icon-fenxiang"></span>
+            </div>
+           
+            `)
+            $('.content').html(ob)
+        })
+    </script>
+</body>
+
+</html>

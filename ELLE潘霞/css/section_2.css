@@ -1,0 +1,136 @@
+.section_2 {
+    background: #fff;
+    overflow: auto;
+}
+
+.boy_aside {
+    width: 6.91rem;
+    height: 3.56rem;
+    margin: 0 auto;
+    margin-top: 0.38rem;
+    margin-bottom: 0.2rem
+}
+
+.boy_aside img {
+    width: 6.91rem;
+    height: 3.56rem;
+    border-radius: 0.14rem
+}
+
+.boy_aside_02 {
+    width: 6.91rem;
+    height: 2.1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boy_aside_02 div img {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 0.12rem
+}
+
+.boy_article {
+    width: 6.91rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.boy_article aside {
+    font-size: 0.25rem;
+    width: 6.91rem;
+    height: 1.31rem;
+    margin-top: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start
+}
+
+.boy_article aside h2 {
+    font-size: 0.21rem;
+    color: #ed3933;
+    margin-top: 0.15rem
+}
+
+.boy_article aside p:nth-of-type(1) {
+    font-size: 0.28rem;
+    color: #101010
+}
+
+.boy_article aside p:nth-of-type(2) {
+    font-size: 0.16rem;
+    color: #999;
+    margin-bottom: 0.19rem
+}
+
+.boy_article_img {
+    width: 6.91rem;
+    height: 4.5rem;
+    margin-top: 0.28rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boy_article_img .boy_img1 {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.boy_article_img .boy_img1 img {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.boy_article_img img {
+    border-radius: 0.12rem
+}
+
+.boy_article_img .boy_img2 {
+    width: 2.1rem;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boy_article_img .boy_img2 img:nth-child(1) {
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+.boy_article_img .boy_img2 img:nth-child(2) {
+    width: 2.1rem;
+    height: 2.05rem;
+}
+
+
+/* boy article0000000000000000111111111111111结束 */
+
+.boy_article2 {
+    width: 6.91rem;
+    min-height: 0.82rem;
+    margin: 0 auto;
+    margin-top: 0.22rem
+}
+
+.b_article2_title {
+    width: 6.91rem;
+    height: 0.82rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.b_article2_title h2 {
+    font-size: 0.2rem;
+    color: #ed3933;
+    margin-top: 0.1rem;
+}
+
+.b_article2_title p {
+    font-size: 0.25rem;
+    color: #101010;
+    margin-bottom: 0.1rem;
+}

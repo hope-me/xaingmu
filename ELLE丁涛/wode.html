@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        ul,
+        ol,
+        li,
+        dl,
+        dt,
+        dd,
+        form,
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        b {
+            font-weight: normal;
+        }
+
+        html {
+            font-size: 13.333vw;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            height: 3.6rem;
+            font-size: .64rem;
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header span {
+            font-size: .34rem;
+        }
+
+        header span:nth-of-type(2) {
+            font-size: .36rem;
+            margin: 0 .4rem;
+        }
+
+        section {
+            flex: 1;
+        }
+
+        footer {
+            height: .96rem;
+            border-top: rgba(200, 200, 200, 0.5) solid 2px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        footer figure {
+            text-align: center;
+        }
+
+        footer figcaption {
+            font-size: .17rem;
+            line-height: .34rem;
+            color: #cfcfcf;
+        }
+
+        footer figure:nth-of-type(3) {
+            width: 1.48rem;
+            height: 1.48rem;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            background: #fff;
+        }
+
+        footer figure:nth-of-type(3) img {
+            width: .76rem;
+            margin: .26rem auto 0;
+
+        }
+
+        footer figure:hover {
+            color: #101010;
+        }
+
+        footer figure:hover figcaption {
+            color: #101010;
+        }
+
+        section .order {
+            height: 2.46rem;
+            width: 6.9rem;
+            background: #eeeeee;
+            margin: -.7rem auto .2rem;
+            border-radius: .1rem;
+            overflow: hidden;
+        }
+
+        section .order .order-title {
+            font-size: .28rem;
+            display: flex;
+            justify-content: space-between;
+            width: 6.3rem;
+            margin: .45rem auto 0;
+        }
+
+        section .order .order-title span:nth-of-type(1) {
+            color: #101010;
+        }
+
+        section .order .order-title span:nth-of-type(2) {
+            color: #9d9d9d;
+            font-size: .22rem;
+        }
+
+        section .order .order-title span:nth-of-type(2) span {
+            color: #999999;
+            font-size: .24rem;
+            margin-left: .2rem;
+        }
+
+        section .order .order-main {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: .46rem auto 0;
+            width: 6.3rem;
+        }
+
+        section .order .order-main .iconfont {
+            font-size: .4rem;
+            line-height: .56rem;
+        }
+
+        section .order .order-main .iconfont figcaption {
+            font-size: .22rem;
+            line-height: .38rem;
+        }
+
+        section .asset {
+            height: 2.36rem;
+            width: 6.9rem;
+            background: #eeeeee;
+            margin: .2rem auto;
+            border-radius: .1rem;
+            overflow: hidden;
+        }
+
+        section .asset .asset-title {
+            font-size: .28rem;
+            display: flex;
+            justify-content: space-between;
+            width: 6.3rem;
+            margin: .45rem auto 0;
+        }
+
+        section .asset .asset-title span:nth-of-type(1) {
+            color: #101010;
+        }
+
+        section .asset .asset-title span:nth-of-type(2) {
+            color: #9d9d9d;
+            font-size: .22rem;
+        }
+
+        section .asset .asset-title span:nth-of-type(2) span {
+            color: #999999;
+            font-size: .24rem;
+            margin-left: .2rem;
+        }
+
+        section .asset .asset-main {
+            display: flex;
+            justify-content: space-between;
+            width: 6.3rem;
+            margin: .36rem auto 0;
+        }
+
+        section .asset .asset-main div:nth-of-type(1) {
+            height: .8rem;
+            width: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section .asset .asset-main div:nth-of-type(1) span:nth-of-type(1) {
+            font-size: .22rem;
+            line-height: .38rem;
+        }
+
+        section .asset .asset-main div:nth-of-type(1) span:nth-of-type(2) {
+            font-size: .36rem;
+            line-height: .54rem;
+        }
+
+        section .asset .asset-main div:nth-of-type(2) {
+            height: .8rem;
+            width: 2rem;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        section .asset .asset-main div:nth-of-type(2) .iconfont {
+            font-size: .4rem;
+            line-height: .56rem;
+            color: #101010;
+            position: relative;
+        }
+
+        section .asset .asset-main div:nth-of-type(2) .iconfont figcaption {
+            font-size: .22rem;
+            line-height: .38rem;
+        }
+
+        section .news {
+            height: 1.4rem;
+            width: 6.9rem;
+            background: #eeeeee;
+            margin: .2rem auto;
+            border-radius: .1rem;
+        }
+
+        section .common {
+            height: 2.26rem;
+            width: 6.9rem;
+            background: #eeeeee;
+            margin: .2rem auto;
+            border-radius: .1rem;
+            overflow: hidden;
+        }
+
+        section .common .common-title {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        section .common .common-title span {
+            font-size: .28rem;
+            color: #101010;
+            width: 6.3rem;
+            margin: .45rem auto 0;
+        }
+
+        section .common .common-main {
+            display: flex;
+            justify-content: space-between;
+            width: 6.3rem;
+            margin: .32rem auto 0;
+            text-align: center;
+        }
+
+        section .common .common-main .iconfont {
+            font-size: .4rem;
+            line-height: .56rem;
+        }
+
+        section .common .common-main .iconfont figcaption {
+            font-size: .22rem;
+            line-height: .38rem;
+        }
+
+        footer .iconfont {
+            font-size: .4rem;
+            line-height: .42rem;
+            color: #cfcfcf;
+        }
+        .userinfo {
+            display: flex;
+        }
+        .user-head {
+            width: 1.36rem;
+            height: 1.36rem;
+            border-radius: 50%;
+            border: 0.04rem solid #e53731;
+            overflow: hidden;
+            margin: 0 .2rem 0 -1.2rem;
+        }
+        .user-head img {
+            width: 100%;
+            height: 100%;
+        }
+        .user-name {
+            width: 3rem;
+            height: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .user-name>span {
+            font-size: .38rem;
+            color: lightcoral;
+            margin-bottom: .1rem;
+        }
+        .user-name div {
+            width: 2.4rem;
+            height: 0.38rem;
+            border-radius: .19rem;
+            display: flex;
+            background: #4e4746;
+            justify-content: space-around;
+            padding: 0 .2rem;
+        }
+        .user-name div span {
+            font-size: .18rem;
+            line-height: .38rem;
+            color: #fff;
+            margin: 0;
+        }
+        .red-dot {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: #ed3933;
+            border-radius: 50%;
+            font-size: .12rem;
+            line-height: .24rem;
+            text-align: center;
+        }
+        .red-dot-coupon {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="userinfo">
+        <span class="login">登录</span>
+        <span>|</span>
+        <span class="register">注册</span>
+    </header>
+    <section>
+        <article class="order">
+            <div class="order-title">
+                <span>我的订单</span>
+                <span>查看全部订单<span>></span></span>
+            </div>
+            <div class="order-main">
+                <figure class="iconfont icon-qianbao">
+                    <figcaption>待付款</figcaption>
+                </figure>
+                <figure class="iconfont icon-daifahuo">
+                    <figcaption>待发货</figcaption>
+                </figure>
+                <figure class="iconfont icon-wuliu">
+                    <figcaption>待收货</figcaption>
+                </figure>
+                <figure class="iconfont icon-Group-">
+                    <figcaption>待评价</figcaption>
+                </figure>
+                <figure class="iconfont icon-tuikuantuihuo">
+                    <figcaption>退货/退款</figcaption>
+                </figure>
+            </div>
+        </article>
+        <article class="asset">
+            <div class="asset-title">
+                <span>我的资产</span>
+                <span>我要充值<span>></span></span>
+            </div>
+            <div class="asset-main">
+                <div>
+                    <span>账户余额</span>
+                    <span>￥0.00</span>
+                </div>
+                <div>
+                    <figure class="iconfont icon-qiaquan">
+                        <figcaption>优惠券</figcaption>
+                        <span class="red-dot red-dot-coupon"></span>
+                    </figure>
+                    <figure class="iconfont icon-shinshoplipinqia">
+                        <figcaption>礼品卡</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </article>
+        <article class="news">
+
+        </article>
+        <article class="common">
+            <div class="common-title">
+                <span>我的常用</span>
+            </div>
+            <div class="common-main">
+                <figure class="iconfont icon-shoucang">
+                    <figcaption>我的收藏</figcaption>
+                </figure>
+                <figure class="iconfont icon-yanjing">
+                    <figcaption>我的浏览</figcaption>
+                </figure>
+                <figure class="iconfont icon-dutoutiao">
+                    <figcaption>我的头条</figcaption>
+                </figure>
+                <figure class="iconfont icon-shezhi">
+                    <figcaption>更多设置</figcaption>
+                </figure>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <figure class="iconfont icon-shouye iconfonts">
+            <figcaption>精选</figcaption>
+        </figure>
+        <figure class="iconfont icon-sousuo iconfonts">
+            <figcaption>分类</figcaption>
+        </figure>
+        <figure>
+            <figcaption class="logo">
+                <img src="img/logo-off.jpg" />
+            </figcaption>
+        </figure>
+        <figure class="iconfont icon-gouwuche iconfonts">
+            <figcaption>购物车</figcaption>
+        </figure>
+        <figure class="iconfont icon-wode iconfonts">
+            <figcaption>我的</figcaption>
+        </figure>
+    </footer>
+    <script>
+        $(function () {
+            var url = 'http://106.13.115.175:8080/elleshop/userCoupons/allCoupons.do'
+            $.ajax({
+                url: url,
+                type: 'get',
+                //请求成功
+                success: function (res) {
+                    console.log(res);
+                    console.log(res.info)
+                    $('.red-dot-coupon').text(
+                        res.info.length
+                    )
+                },
+                //请求失败
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        })
+        $('.logo').hover(function () {
+            $(this).html(`<img src="img/logo-on.jpg" />`)
+        }, function () {
+            $(this).html(`<img src="img/logo-off.jpg" />`)
+        })
+        $('.iconfonts').hover(function () {
+            $('.logo').html(`<img src="img/logo-off.jpg" />`)
+        })
+        $('.icon-shouye').hover(function () {
+            window.location.href = "../ELLE潘霞/jx_all.html"
+        })
+        $('.icon-sousuo').hover(function () {
+            window.location.href = "../ELLE卢傲祥/6.html"
+        })
+        $('.icon-gouwuche').hover(function () {
+            window.location.href = "../ELLE丁涛/cart.html"
+        })
+        $('.icon-wode').hover(function () {
+            window.location.href = "../ELLE丁涛/wode.html"
+        })
+        $('.login').hover(function () {
+            window.location.href = "../ELLE闫恩辉/index3.html"
+        })
+        $('.register').hover(function () {
+            window.location.href = "../ELLE闫恩辉/index2.html"
+        })
+        let token = window.localStorage.getItem("token")
+        if (token) {
+            $('.userinfo').html(`
+            <div class="user-head">
+            <img src="http://106.13.115.175:9999/kind/xizhuang.jpg" />
+            </div>
+            <div class="user-name">
+                <span>罗小白</span>
+                <div>
+                    <span>Svip会员</span>
+                    <span>|</span>
+                    <span>成长值：2</span>
+                </div>
+            </div>
+            `)
+            $('.userinfo').css({
+                backgroundImage:'url(http://106.13.115.175:9999/kind/xizhuang.jpg)'
+            })
+        }
+    </script>
+</body>
+
+</html>

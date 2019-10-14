@@ -1,0 +1,269 @@
+/* --------头部开始------ */
+
+header {
+    height: 1.18rem;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+header input[type="text"] {
+    width: 6.89rem;
+    height: 0.6rem;
+    border: 0;
+    text-indent: 1rem;
+    background: #f9f9f9;
+}
+
+header input[type="submit"] {
+    border: 0;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.4rem;
+    background: url(../img/header-fangdajing.png) no-repeat;
+    background-size: 0.4rem 0.4rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+header input::placeholder {
+    /* color: red; */
+    font-size: 0.18rem;
+}
+
+
+/* --------头部结束----------- */
+
+
+/* ----------section开始------------ */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    overflow: auto;
+    /* background: #eee; */
+}
+
+section .pinlei-pinpai {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+section .pinlei-pinpai .list1 {
+    width: 100%;
+    height: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.26rem;
+    border-bottom: 1px solid #ccc;
+}
+
+section .pinlei-pinpai .list1 li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 1.2rem;
+    color: #101010;
+}
+
+/* section .pinlei-pinpai .list1 li:hover a {
+    font-weight: 900;
+} */
+
+section .pinlei-pinpai .list1 li:nth-child(2) {
+    font-weight: 900;
+}
+
+section .part-down .left ul li:nth-child(1) img {
+    display: block;
+}
+
+section .part-down .left ul li:nth-child(1) a {
+    font-weight: 800;
+    color: #101010;
+}
+
+section .part-down .left ul:hover li:nth-child(1) img {
+    display: none;
+}
+
+section .part-down .left ul:hover li:nth-child(1) a {
+    color: #999999;
+}
+
+
+/* ---------左右列表---------- */
+
+section .part-down {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    /* justify-content: space-between; */
+    /* background: rgb(223, 152, 152); */
+}
+
+
+/* ---------左侧固定列表---------- */
+
+section .part-down .left ul {
+    width: 1.98rem;
+    font-size: 0.26rem;
+    color: #323232;
+    /* background: #dfff2b; */
+    position: fixed;
+    left: 0;
+    top: 2.6rem;
+}
+
+section .part-down .left ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 1.98rem;
+    height: 0.98rem;
+    color: #323232;
+}
+
+section .part-down .left ul li:hover img {
+    display: block;
+}
+
+section .part-down .left ul li:hover a {
+    font-weight: 800;
+    color: #101010;
+}
+
+section .part-down .left ul li:nth-child(1) {
+    font-weight: 800;
+    color: #101010;
+}
+
+section .part-down .left ul li a {
+    color: #999999;
+    font-size: 0.23rem;
+}
+
+section .part-down .left ul li img {
+    display: none;
+    width: 0.1rem;
+    height: 0.4rem;
+    position: absolute;
+    left: 0;
+}
+
+
+/* ---------右侧列表----------- */
+
+section .part-down .right {
+    width: 5.22rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background: #ccc; */
+    /* margin-right: 0.17rem; */
+    margin-left: 1.98rem;
+}
+
+section .part-down .right .banner {
+    width: 5.22rem;
+    margin-top: 0.29rem;
+    /* margin-right: 0.3rem; */
+}
+
+section .part-down .right .list1 {
+    width: 5.22rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .part-down .right img:nth-of-type(2) {
+    width: 5.22rem;
+    height: 0.75rem;
+}
+
+section .part-down .right dl {
+    width: 1.74rem;
+    height: 2.56rem;
+    font-size: 0.21rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section .part-down .right dl dt {
+    width: 1.74rem;
+    height: 1.75rem;
+    margin-bottom: 0.08rem;
+    display: flex;
+    justify-content: center;
+}
+
+section .part-down .right .list1 dl img,
+section .part-down .right .list2 dl img {
+    display: block;
+    width: 1.37rem;
+    height: 1.25rem;
+}
+
+
+/* ----------section结束------------ */
+
+
+/* -----------底部开始--------------- */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    height: 0.94rem;
+    margin-bottom: 0.25rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    flex-shrink: 0;
+    position: relative;
+    background: #fff;
+}
+
+footer figure {
+    font-size: 0.18rem;
+    /* line-height: 0.94rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #999999;
+}
+
+footer figure .iconfont {
+    font-size: 0.39rem;
+    text-align: center;
+    color: #999999;
+}
+
+footer figure:nth-child(3) {
+    font-weight: 600;
+    color: #101010;
+}
+
+footer img {
+    width: 1.52rem;
+    height: 1.52rem;
+    position: absolute;
+    left: 2.9rem;
+    bottom: -0.25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #eee;
+}

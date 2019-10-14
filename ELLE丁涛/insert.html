@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        ul,
+        ol,
+        li,
+        dl,
+        dt,
+        dd,
+        form,
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        b {
+            font-weight: normal;
+        }
+
+        html {
+            font-size: 13.333vw;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background: #eee;
+        }
+
+        .insert {
+            width: 7.5rem;
+            height: 6.08rem;
+            position: fixed;
+            bottom: 0;
+            border-radius: .1rem .1rem 0 0;
+            background: #fff;
+        }
+
+        .i-one {
+            height: 2.76rem;
+            width: 6.9rem;
+            border-bottom: 0.04rem solid #eeeeee;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .goods-img {
+            width: 1.94rem;
+            height: 1.94rem;
+            background: #eeeeee;
+            margin-left: .3rem;
+            margin-right: .6rem;
+        }
+
+        .g-logo {
+            font-size: .22rem;
+            color: #141414;
+            width: 3rem;
+            margin: 0 0 .2rem;
+        }
+
+        .g-name {
+            font-size: .22rem;
+            color: #141414;
+            width: 3rem;
+            margin: 0 0 .2rem;
+        }
+
+        .g-price {
+            font-size: .22rem;
+            color: #ed3933;
+            width: 3rem;
+            margin: 0 0 .2rem;
+        }
+
+        .g-amount {
+            font-size: .22rem;
+            color: #e8b32a;
+            width: 3rem;
+        }
+
+        .cancel {
+            color: #101010;
+            font-size: .28rem;
+            align-self: flex-start;
+            margin-top: .3rem;
+            margin-left: .9rem;
+        }
+
+        .i-two {
+            height: 0.76rem;
+            width: 6.9rem;
+            border-bottom: 0.04rem solid #eeeeee;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .i-color,
+        .i-size {
+            width: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .color-s {
+            font-size: .22rem;
+            color: #101010;
+        }
+
+        .color-o {
+            width: 0.16rem;
+            height: 0.1rem;
+        }
+
+        .size-s {
+            font-size: .22rem;
+            color: #101010;
+        }
+
+        .size-o {
+            width: 0.16rem;
+            height: 0.1rem;
+        }
+
+        .fenge {
+            font-size: .5rem;
+            color: #eeeeee;
+        }
+
+        .i-thr {
+            height: 0.76rem;
+            width: 6.9rem;
+            border-bottom: 0.04rem solid #eeeeee;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .i-thr .subBtn,
+        .i-thr .addBtn,
+        .i-thr .numIpt {
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+
+        .i-thr .subBtn,
+        .i-thr .addBtn {
+            background: #f9f9f9;
+            width: 0.5rem;
+            height: 0.5rem;
+        }
+
+        .i-for {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .cart,
+        .buy {
+            width: 3.24rem;
+            height: 0.8rem;
+            background: #eeeeee;
+            color: #101010;
+            font-size: .28rem;
+            border-radius: .1rem;
+            margin-top: .64rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="insert">
+        <div class="i-one">
+            <div class="goods-img"></div>
+            <div class="goods-main">
+                <h3 class="g-logo">尾巴</h3>
+                <h3 class="g-name">嘿咻</h3>
+                <h4 class="g-price">￥199</h4>
+                <h4 class="g-amount">库存紧张</h4>
+            </div>
+            <div class="cancel">X</div>
+        </div>
+        <div class="i-two">
+            <div class="i-color">
+                <select class="color-s">
+                    <option>蓝色</option>
+                </select>
+            </div>
+            <span class="fenge">|</span>
+            <div class="i-size">
+                <select class="size-s">
+                    <option>XXL</option>
+                </select>
+            </div>
+        </div>
+        <div class="i-thr">
+            <button class="subBtn">-</button>
+            <input type="text" class="numIpt" value="1" />
+            <button class="addBtn">+</button>
+        </div>
+        <div class="i-for">
+            <div class="cart">加入购物车</div>
+            <div class="buy">立即购买</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
